@@ -1,0 +1,1373 @@
+[gaddam.h@explorer-02 ~]$ cd ~/crispritz_repro/guides
+[gaddam.h@explorer-02 guides]$ scp ~/Downloads/ccr5_guides.txt gaddam.h@login.explorer.northeastern.edu:~/crispritz_repro/guides/
+The authenticity of host 'login.explorer.northeastern.edu (129.10.0.146)' can't be established.
+ED25519 key fingerprint is SHA256:PxoJM2iNOhJ/UdghVgDaa+kx+/WrZ9aZmSjgV1+MSyA.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'login.explorer.northeastern.edu' (ED25519) to the list of known hosts.
+gaddam.h@login.explorer.northeastern.edu's password: 
+stat local "/home/gaddam.h/Downloads/ccr5_guides.txt": No such file or directory
+[gaddam.h@explorer-02 guides]$ ls -lh ~/crispritz_repro/guides/ccr5_guides.txt 
+-rw-r--r-- 1 gaddam.h users 2.6K Nov 24 17:18 /home/gaddam.h/crispritz_repro/guides/ccr5_guides.txt
+[gaddam.h@explorer-02 guides]$ wc -l ~/crispritz_repro/guides/ccr5_guides.txt
+0 /home/gaddam.h/crispritz_repro/guides/ccr5_guides.txt
+[gaddam.h@explorer-02 guides]$ wc -l ccr5_guides.txt
+0 ccr5_guides.txt
+[gaddam.h@explorer-02 guides]$ head ccr5_guides.txt
+[gaddam.h@explorer-02 guides]$ cd ~/crispritz_repro/guides
+[gaddam.h@explorer-02 guides]$ wc -l ccr5_guide.txt
+123 ccr5_guide.txt
+[gaddam.h@explorer-02 guides]$ head -5 ccr5_guide.txt
+AAAACAGGTCAGAGATGGCC
+AAAGATAGTCATCTTGGGGC
+AAAGCCAGGACGGTCACCTT
+AAATGAGAAGAAGAGGCACA
+AACACCAGTGAGTAGAGCGG
+[gaddam.h@explorer-02 guides]$ cd ~/crispritz_repro
+[gaddam.h@explorer-02 crispritz_repro]$ echo "=== PERSON 4 CCR5 ANALYSIS STARTED ===" >> results/person4/execution_log.txt
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Starting CCR5 reference search at $(date)" >> results/person4/execution_log.txt
+[gaddam.h@explorer-02 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py search \
+  genome_library/NGG_2_hg19_reference \
+  pam/pamNGG.txt \
+  guides/ccr5_guides.txt \
+  results/person4/ccr5_analysis/ccr5_reference \
+  -mm 4 \
+  -bDNA 0 \
+  -bRNA 0 \
+  -th 4 \
+  -t
+Search START
+USED THREADS 4
+ANALYZING CHROMOSOME chrUn_gl000226 (Total progress: 0.7%)
+ANALYZING CHROMOSOME chr18_gl000207_random (Total progress: 1.5%)
+ANALYZING CHROMOSOME chrM (Total progress: 2.2%)
+ANALYZING CHROMOSOME chr17_gl000203_random (Total progress: 2.9%)
+ANALYZING CHROMOSOME chrUn_gl000227 (Total progress: 3.6%)
+ANALYZING CHROMOSOME chrUn_gl000229 (Total progress: 4.4%)
+ANALYZING CHROMOSOME chrUn_gl000245 (Total progress: 5.1%)
+ANALYZING CHROMOSOME chrUn_gl000235 (Total progress: 5.8%)
+ANALYZING CHROMOSOME chrUn_gl000214 (Total progress: 6.6%)
+ANALYZING CHROMOSOME chrUn_gl000231 (Total progress: 7.3%)
+ANALYZING CHROMOSOME chrUn_gl000246 (Total progress: 8.0%)
+ANALYZING CHROMOSOME chr8_gl000196_random (Total progress: 8.8%)
+ANALYZING CHROMOSOME chrUn_gl000221 (Total progress: 9.5%)
+ANALYZING CHROMOSOME chrUn_gl000241 (Total progress: 10.2%)
+ANALYZING CHROMOSOME chr1_gl000192_random (Total progress: 10.9%)
+ANALYZING CHROMOSOME chrUn_gl000230 (Total progress: 11.7%)
+ANALYZING CHROMOSOME chr17_gl000204_random (Total progress: 12.4%)
+ANALYZING CHROMOSOME chrUn_gl000239 (Total progress: 13.1%)
+ANALYZING CHROMOSOME chrUn_gl000247 (Total progress: 13.9%)
+ANALYZING CHROMOSOME chrUn_gl000228 (Total progress: 14.6%)
+ANALYZING CHROMOSOME chrUn_gl000238 (Total progress: 15.3%)
+ANALYZING CHROMOSOME chrUn_gl000233 (Total progress: 16.1%)
+ANALYZING CHROMOSOME chr19_gl000208_random (Total progress: 16.8%)
+ANALYZING CHROMOSOME chr19_gl000209_random (Total progress: 17.5%)
+ANALYZING CHROMOSOME chr9_gl000198_random (Total progress: 18.2%)
+ANALYZING CHROMOSOME chrUn_gl000236 (Total progress: 19.0%)
+ANALYZING CHROMOSOME chrUn_gl000240 (Total progress: 19.7%)
+ANALYZING CHROMOSOME chrUn_gl000217 (Total progress: 20.4%)
+ANALYZING CHROMOSOME chrUn_gl000232 (Total progress: 21.2%)
+ANALYZING CHROMOSOME chrUn_gl000234 (Total progress: 21.9%)
+ANALYZING CHROMOSOME chr21_gl000210_random (Total progress: 22.6%)
+ANALYZING CHROMOSOME chrUn_gl000211 (Total progress: 23.4%)
+ANALYZING CHROMOSOME chrUn_gl000248 (Total progress: 24.1%)
+ANALYZING CHROMOSOME chrUn_gl000244 (Total progress: 24.8%)
+ANALYZING CHROMOSOME chrUn_gl000249 (Total progress: 25.5%)
+ANALYZING CHROMOSOME chrUn_gl000224 (Total progress: 26.3%)
+ANALYZING CHROMOSOME chr9_gl000199_random (Total progress: 27.0%)
+ANALYZING CHROMOSOME chrUn_gl000216 (Total progress: 27.7%)
+ANALYZING CHROMOSOME chrUn_gl000243 (Total progress: 28.5%)
+ANALYZING CHROMOSOME chrUn_gl000237 (Total progress: 29.2%)
+ANALYZING CHROMOSOME chrUn_gl000219 (Total progress: 29.9%)
+ANALYZING CHROMOSOME chrUn_gl000242 (Total progress: 30.7%)
+ANALYZING CHROMOSOME chr8_gl000197_random (Total progress: 31.4%)
+ANALYZING CHROMOSOME chr17_gl000205_random (Total progress: 32.1%)
+ANALYZING CHROMOSOME chr17_gl000206_random (Total progress: 32.8%)
+ANALYZING CHROMOSOME chr17_ctg5_hap1 (Total progress: 33.6%)
+ANALYZING CHROMOSOME chr11_gl000202_random (Total progress: 34.3%)
+ANALYZING CHROMOSOME chrUn_gl000213 (Total progress: 35.0%)
+ANALYZING CHROMOSOME chr9_gl000201_random (Total progress: 35.8%)
+ANALYZING CHROMOSOME chr7_gl000195_random (Total progress: 36.5%)
+ANALYZING CHROMOSOME chr1_gl000191_random (Total progress: 37.2%)
+ANALYZING CHROMOSOME chrUn_gl000218 (Total progress: 38.0%)
+ANALYZING CHROMOSOME chr9_gl000200_random (Total progress: 38.7%)
+ANALYZING CHROMOSOME chr4_gl000193_random (Total progress: 39.4%)
+ANALYZING CHROMOSOME chrUn_gl000223 (Total progress: 40.1%)
+ANALYZING CHROMOSOME chrUn_gl000215 (Total progress: 40.9%)
+ANALYZING CHROMOSOME chrUn_gl000220 (Total progress: 41.6%)
+ANALYZING CHROMOSOME chrUn_gl000225 (Total progress: 42.3%)
+ANALYZING CHROMOSOME chrUn_gl000222 (Total progress: 43.1%)
+ANALYZING CHROMOSOME chrUn_gl000212 (Total progress: 43.8%)
+ANALYZING CHROMOSOME chr4_gl000194_random (Total progress: 44.5%)
+ANALYZING CHROMOSOME chr6_apd_hap1 (Total progress: 45.3%)
+ANALYZING CHROMOSOME chr4_ctg9_hap1 (Total progress: 46.0%)
+ANALYZING CHROMOSOME chr17 (Total progress: 46.7%)
+ANALYZING CHROMOSOME chr6_mcf_hap5 (Total progress: 47.4%)
+ANALYZING CHROMOSOME chr6_mann_hap4 (Total progress: 48.2%)
+ANALYZING CHROMOSOME chr6_ssto_hap7 (Total progress: 48.9%)
+ANALYZING CHROMOSOME chr6_dbb_hap3 (Total progress: 49.6%)
+ANALYZING CHROMOSOME chr13 (Total progress: 50.4%)
+ANALYZING CHROMOSOME chr6_qbl_hap6 (Total progress: 51.1%)
+ANALYZING CHROMOSOME chr6_cox_hap2 (Total progress: 51.8%)
+ANALYZING CHROMOSOME chr1 (Total progress: 52.6%)
+ANALYZING CHROMOSOME chr7 (Total progress: 53.3%)
+ANALYZING CHROMOSOME chr5 (Total progress: 54.0%)
+ANALYZING CHROMOSOME chr2 (Total progress: 54.7%)
+ANALYZING CHROMOSOME chr6 (Total progress: 55.5%)
+ANALYZING CHROMOSOME chr4 (Total progress: 56.2%)
+ANALYZING CHROMOSOME chr21 (Total progress: 56.9%)
+ANALYZING CHROMOSOME chr1 (Total progress: 57.7%)
+ANALYZING CHROMOSOME chr5 (Total progress: 58.4%)
+ANALYZING CHROMOSOME chr4 (Total progress: 59.1%)
+ANALYZING CHROMOSOME chr20 (Total progress: 59.9%)
+ANALYZING CHROMOSOME chr3 (Total progress: 60.6%)
+ANALYZING CHROMOSOME chrY (Total progress: 61.3%)
+ANALYZING CHROMOSOME chr2 (Total progress: 62.0%)
+ANALYZING CHROMOSOME chr18 (Total progress: 62.8%)
+ANALYZING CHROMOSOME chr10 (Total progress: 63.5%)
+ANALYZING CHROMOSOME chr15 (Total progress: 64.2%)
+ANALYZING CHROMOSOME chr9 (Total progress: 65.0%)
+ANALYZING CHROMOSOME chr2 (Total progress: 65.7%)
+ANALYZING CHROMOSOME chr10 (Total progress: 66.4%)
+ANALYZING CHROMOSOME chr19 (Total progress: 67.2%)
+ANALYZING CHROMOSOME chr2 (Total progress: 67.9%)
+ANALYZING CHROMOSOME chr11 (Total progress: 68.6%)
+ANALYZING CHROMOSOME chr12 (Total progress: 69.3%)
+Killed
+[gaddam.h@explorer-02 crispritz_repro]$ ANALYZING CHROMOSOME chr3 (Total progress: 70.1%)
+ANALYZING CHROMOSOME chr12 (Total progress: 70.8%)
+ANALYZING CHROMOSOME chr14 (Total progress: 71.5%)
+ANALYZING CHROMOSOME chr9 (Total progress: 72.3%)
+ANALYZING CHROMOSOME chr8 (Total progress: 73.0%)
+ANALYZING CHROMOSOME chr7 (Total progress: 73.7%)
+ANALYZING CHROMOSOME chr8 (Total progress: 74.5%)
+ANALYZING CHROMOSOME chr3 (Total progress: 75.2%)
+ANALYZING CHROMOSOME chrX (Total progress: 75.9%)
+ANALYZING CHROMOSOME chr1 (Total progress: 76.6%)
+ANALYZING CHROMOSOME chr6 (Total progress: 77.4%)
+ANALYZING CHROMOSOME chr17 (Total progress: 78.1%)
+ANALYZING CHROMOSOME chrX (Total progress: 78.8%)
+ANALYZING CHROMOSOME chr6 (Total progress: 79.6%)
+ANALYZING CHROMOSOME chr9 (Total progress: 80.3%)
+ANALYZING CHROMOSOME chr17 (Total progress: 81.0%)
+ANALYZING CHROMOSOME chrX (Total progress: 81.8%)
+ANALYZING CHROMOSOME chr16 (Total progress: 82.5%)
+ANALYZING CHROMOSOME chr4 (Total progress: 83.2%)
+ANALYZING CHROMOSOME chr16 (Total progress: 83.9%)
+ANALYZING CHROMOSOME chr1 (Total progress: 84.7%)
+ANALYZING CHROMOSOME chr2 (Total progress: 85.4%)
+ANALYZING CHROMOSOME chr5 (Total progress: 86.1%)
+ANALYZING CHROMOSOME chr7 (Total progress: 86.9%)
+ANALYZING CHROMOSOME chr7 (Total progress: 87.6%)
+ANALYZING CHROMOSOME chr11 (Total progress: 88.3%)
+ANALYZING CHROMOSOME chr1 (Total progress: 89.1%)
+ANALYZING CHROMOSOME chr19 (Total progress: 89.8%)
+ANALYZING CHROMOSOME chr12 (Total progress: 90.5%)
+ANALYZING CHROMOSOME chr3 (Total progress: 91.2%)
+ANALYZING CHROMOSOME chr10 (Total progress: 92.0%)
+ANALYZING CHROMOSOME chr14 (Total progress: 92.7%)
+ANALYZING CHROMOSOME chr15 (Total progress: 93.4%)
+ANALYZING CHROMOSOME chr11 (Total progress: 94.2%)
+ANALYZING CHROMOSOME chr4 (Total progress: 94.9%)
+ANALYZING CHROMOSOME chr6 (Total progress: 95.6%)
+ANALYZING CHROMOSOME 22 (Total progress: 96.4%)
+ANALYZING CHROMOSOME chr8 (Total progress: 97.1%)
+ANALYZING CHROMOSOME chr5 (Total progress: 97.8%)
+ANALYZING CHROMOSOME chr13 (Total progress: 98.5%)
+ANALYZING CHROMOSOME chr18 (Total progress: 99.3%)
+ANALYZING CHROMOSOME chr20 (Total progress: 100.0%)
+-----------------------
+TOTAL TIME:	542.5
+
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Completed CCR5 reference search at $(date)" >> results/person4/execution_log.txt
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Starting CCR5 enriched search at $(date)" >> results/person4/execution_log.txt
+[gaddam.h@explorer-02 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py search \
+  genome_library/NGG_2_hg19_enriched \
+  pam/pamNGG.txt \
+  guides/ccr5_guides.txt \
+  results/person4/ccr5_analysis/ccr5_enriched \
+  -mm 4 \
+  -bDNA 0 \
+  -bRNA 0 \
+  -th 4 \
+  -t
+Search START
+USED THREADS 4
+ANALYZING CHROMOSOME chrUn_gl000226 (Total progress: 0.7%)
+ANALYZING CHROMOSOME chr18_gl000207_random (Total progress: 1.4%)
+ANALYZING CHROMOSOME chrM (Total progress: 2.2%)
+ANALYZING CHROMOSOME chr17_gl000203_random (Total progress: 2.9%)
+ANALYZING CHROMOSOME chrUn_gl000227 (Total progress: 3.6%)
+ANALYZING CHROMOSOME chrUn_gl000229 (Total progress: 4.3%)
+ANALYZING CHROMOSOME chrUn_gl000245 (Total progress: 5.1%)
+ANALYZING CHROMOSOME chrUn_gl000235 (Total progress: 5.8%)
+ANALYZING CHROMOSOME chrUn_gl000214 (Total progress: 6.5%)
+ANALYZING CHROMOSOME chrUn_gl000231 (Total progress: 7.2%)
+ANALYZING CHROMOSOME chrUn_gl000246 (Total progress: 8.0%)
+ANALYZING CHROMOSOME chr8_gl000196_random (Total progress: 8.7%)
+ANALYZING CHROMOSOME chrUn_gl000221 (Total progress: 9.4%)
+ANALYZING CHROMOSOME chrUn_gl000241 (Total progress: 10.1%)
+ANALYZING CHROMOSOME chrUn_gl000230 (Total progress: 10.9%)
+ANALYZING CHROMOSOME chr1_gl000192_random (Total progress: 11.6%)
+ANALYZING CHROMOSOME chrUn_gl000239 (Total progress: 12.3%)
+ANALYZING CHROMOSOME chr17_gl000204_random (Total progress: 13.0%)
+ANALYZING CHROMOSOME chrUn_gl000247 (Total progress: 13.8%)
+ANALYZING CHROMOSOME chrUn_gl000238 (Total progress: 14.5%)
+ANALYZING CHROMOSOME chrUn_gl000228 (Total progress: 15.2%)
+ANALYZING CHROMOSOME chrUn_gl000233 (Total progress: 15.9%)
+ANALYZING CHROMOSOME chr19_gl000208_random (Total progress: 16.7%)
+ANALYZING CHROMOSOME chr19_gl000209_random (Total progress: 17.4%)
+ANALYZING CHROMOSOME chr9_gl000198_random (Total progress: 18.1%)
+ANALYZING CHROMOSOME chrUn_gl000236 (Total progress: 18.8%)
+ANALYZING CHROMOSOME chrUn_gl000240 (Total progress: 19.6%)
+ANALYZING CHROMOSOME chrUn_gl000217 (Total progress: 20.3%)
+ANALYZING CHROMOSOME chrUn_gl000232 (Total progress: 21.0%)
+ANALYZING CHROMOSOME chrUn_gl000234 (Total progress: 21.7%)
+ANALYZING CHROMOSOME chr21_gl000210_random (Total progress: 22.5%)
+ANALYZING CHROMOSOME chrUn_gl000248 (Total progress: 23.2%)
+ANALYZING CHROMOSOME chrUn_gl000211 (Total progress: 23.9%)
+ANALYZING CHROMOSOME chrUn_gl000244 (Total progress: 24.6%)
+ANALYZING CHROMOSOME chrUn_gl000249 (Total progress: 25.4%)
+ANALYZING CHROMOSOME chr9_gl000199_random (Total progress: 26.1%)
+ANALYZING CHROMOSOME chrUn_gl000224 (Total progress: 26.8%)
+ANALYZING CHROMOSOME chrUn_gl000243 (Total progress: 27.5%)
+ANALYZING CHROMOSOME chrUn_gl000237 (Total progress: 28.3%)
+ANALYZING CHROMOSOME chrUn_gl000242 (Total progress: 29.0%)
+ANALYZING CHROMOSOME chrUn_gl000216 (Total progress: 29.7%)
+ANALYZING CHROMOSOME chr8_gl000197_random (Total progress: 30.4%)
+ANALYZING CHROMOSOME chr17_gl000206_random (Total progress: 31.2%)
+ANALYZING CHROMOSOME chrUn_gl000219 (Total progress: 31.9%)
+ANALYZING CHROMOSOME chr11_gl000202_random (Total progress: 32.6%)
+ANALYZING CHROMOSOME chr9_gl000201_random (Total progress: 33.3%)
+ANALYZING CHROMOSOME chr17_gl000205_random (Total progress: 34.1%)
+ANALYZING CHROMOSOME 22 (Total progress: 34.8%)
+ANALYZING CHROMOSOME chr1_gl000191_random (Total progress: 35.5%)
+ANALYZING CHROMOSOME chrUn_gl000213 (Total progress: 36.2%)
+ANALYZING CHROMOSOME chr7_gl000195_random (Total progress: 37.0%)
+ANALYZING CHROMOSOME chrUn_gl000218 (Total progress: 37.7%)
+ANALYZING CHROMOSOME chr9_gl000200_random (Total progress: 38.4%)
+ANALYZING CHROMOSOME chr4_gl000193_random (Total progress: 39.1%)
+ANALYZING CHROMOSOME chrUn_gl000223 (Total progress: 39.9%)
+ANALYZING CHROMOSOME chrUn_gl000215 (Total progress: 40.6%)
+ANALYZING CHROMOSOME chrUn_gl000220 (Total progress: 41.3%)
+ANALYZING CHROMOSOME chrUn_gl000225 (Total progress: 42.0%)
+ANALYZING CHROMOSOME chr17_ctg5_hap1 (Total progress: 42.8%)
+ANALYZING CHROMOSOME chrUn_gl000222 (Total progress: 43.5%)
+ANALYZING CHROMOSOME chrUn_gl000212 (Total progress: 44.2%)
+ANALYZING CHROMOSOME chr4_gl000194_random (Total progress: 44.9%)
+ANALYZING CHROMOSOME chr4_ctg9_hap1 (Total progress: 45.7%)
+ANALYZING CHROMOSOME chr17 (Total progress: 46.4%)
+ANALYZING CHROMOSOME chr6_apd_hap1 (Total progress: 47.1%)
+ANALYZING CHROMOSOME chr6_mcf_hap5 (Total progress: 47.8%)
+ANALYZING CHROMOSOME chr6_mann_hap4 (Total progress: 48.6%)
+ANALYZING CHROMOSOME chr6_ssto_hap7 (Total progress: 49.3%)
+ANALYZING CHROMOSOME chr6_dbb_hap3 (Total progress: 50.0%)
+ANALYZING CHROMOSOME chr13 (Total progress: 50.7%)
+ANALYZING CHROMOSOME chr6_qbl_hap6 (Total progress: 51.4%)
+ANALYZING CHROMOSOME chr6_cox_hap2 (Total progress: 52.2%)
+ANALYZING CHROMOSOME chr1 (Total progress: 52.9%)
+ANALYZING CHROMOSOME chr7 (Total progress: 53.6%)
+ANALYZING CHROMOSOME chr5 (Total progress: 54.3%)
+ANALYZING CHROMOSOME chr2 (Total progress: 55.1%)
+ANALYZING CHROMOSOME chr6 (Total progress: 55.8%)
+ANALYZING CHROMOSOME chr4 (Total progress: 56.5%)
+ANALYZING CHROMOSOME chr1 (Total progress: 57.2%)
+ANALYZING CHROMOSOME chr5 (Total progress: 58.0%)
+ANALYZING CHROMOSOME chr4 (Total progress: 58.7%)
+ANALYZING CHROMOSOME chr21 (Total progress: 59.4%)
+ANALYZING CHROMOSOME chr20 (Total progress: 60.1%)
+ANALYZING CHROMOSOME chrY (Total progress: 60.9%)
+ANALYZING CHROMOSOME chr2 (Total progress: 61.6%)
+ANALYZING CHROMOSOME chr3 (Total progress: 62.3%)
+ANALYZING CHROMOSOME chr10 (Total progress: 63.0%)
+ANALYZING CHROMOSOME chr18 (Total progress: 63.8%)
+ANALYZING CHROMOSOME chr2 (Total progress: 64.5%)
+ANALYZING CHROMOSOME chr15 (Total progress: 65.2%)
+ANALYZING CHROMOSOME chr9 (Total progress: 65.9%)
+ANALYZING CHROMOSOME chr2 (Total progress: 66.7%)
+ANALYZING CHROMOSOME chr3 (Total progress: 67.4%)
+ANALYZING CHROMOSOME chr10 (Total progress: 68.1%)
+ANALYZING CHROMOSOME chr19 (Total progress: 68.8%)
+ANALYZING CHROMOSOME chr7 (Total progress: 69.6%)
+ANALYZING CHROMOSOME chr12 (Total progress: 70.3%)
+ANALYZING CHROMOSOME chr11 (Total progress: 71.0%)
+Killed
+[gaddam.h@explorer-02 crispritz_repro]$ ANALYZING CHROMOSOME chr12 (Total progress: 71.7%)
+ANALYZING CHROMOSOME chr6 (Total progress: 72.5%)
+ANALYZING CHROMOSOME chr9 (Total progress: 73.2%)
+ANALYZING CHROMOSOME chr14 (Total progress: 73.9%)
+ANALYZING CHROMOSOME chr8 (Total progress: 74.6%)
+ANALYZING CHROMOSOME chr9 (Total progress: 75.4%)
+ANALYZING CHROMOSOME chr3 (Total progress: 76.1%)
+ANALYZING CHROMOSOME chr8 (Total progress: 76.8%)
+ANALYZING CHROMOSOME chrX (Total progress: 77.5%)
+ANALYZING CHROMOSOME chr4 (Total progress: 78.3%)
+ANALYZING CHROMOSOME chr17 (Total progress: 79.0%)
+ANALYZING CHROMOSOME chr1 (Total progress: 79.7%)
+ANALYZING CHROMOSOME chr6 (Total progress: 80.4%)
+ANALYZING CHROMOSOME chr5 (Total progress: 81.2%)
+ANALYZING CHROMOSOME chr17 (Total progress: 81.9%)
+ANALYZING CHROMOSOME chrX (Total progress: 82.6%)
+ANALYZING CHROMOSOME chr19 (Total progress: 83.3%)
+ANALYZING CHROMOSOME chr1 (Total progress: 84.1%)
+ANALYZING CHROMOSOME chr16 (Total progress: 84.8%)
+ANALYZING CHROMOSOME chrX (Total progress: 85.5%)
+ANALYZING CHROMOSOME chr10 (Total progress: 86.2%)
+ANALYZING CHROMOSOME chr11 (Total progress: 87.0%)
+ANALYZING CHROMOSOME chr16 (Total progress: 87.7%)
+ANALYZING CHROMOSOME chr2 (Total progress: 88.4%)
+ANALYZING CHROMOSOME chr4 (Total progress: 89.1%)
+ANALYZING CHROMOSOME chr3 (Total progress: 89.9%)
+ANALYZING CHROMOSOME chr7 (Total progress: 90.6%)
+ANALYZING CHROMOSOME chr5 (Total progress: 91.3%)
+ANALYZING CHROMOSOME chr1 (Total progress: 92.0%)
+ANALYZING CHROMOSOME chr7 (Total progress: 92.8%)
+ANALYZING CHROMOSOME chr11 (Total progress: 93.5%)
+ANALYZING CHROMOSOME chr14 (Total progress: 94.2%)
+ANALYZING CHROMOSOME chr13 (Total progress: 94.9%)
+ANALYZING CHROMOSOME chr8 (Total progress: 95.7%)
+ANALYZING CHROMOSOME chr12 (Total progress: 96.4%)
+ANALYZING CHROMOSOME chr6 (Total progress: 97.1%)
+ANALYZING CHROMOSOME chr20 (Total progress: 97.8%)
+ANALYZING CHROMOSOME chr18 (Total progress: 98.6%)
+ANALYZING CHROMOSOME chr15 (Total progress: 99.3%)
+ANALYZING CHROMOSOME 22 (Total progress: 100.0%)
+-----------------------
+TOTAL TIME:	538.9
+
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Completed CCR5 enriched search at $(date)" >> results/person4/execution_log.txt
+[gaddam.h@explorer-02 crispritz_repro]$ wc -l results/person4/ccr5_analysis/ccr5_reference.targets.txt
+640 results/person4/ccr5_analysis/ccr5_reference.targets.txt
+[gaddam.h@explorer-02 crispritz_repro]$ wc -l results/person4/ccr5_analysis/ccr5_enriched.targets.txt
+641 results/person4/ccr5_analysis/ccr5_enriched.targets.txt
+[gaddam.h@explorer-02 crispritz_repro]$ ref_count=$(wc -l < results/person4/ccr5_analysis/ccr5_reference.targets.txt)
+[gaddam.h@explorer-02 crispritz_repro]$ enr_count=$(wc -l < results/person4/ccr5_analysis/ccr5_enriched.targets.txt)
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Reference: $ref_count off-targets" 
+Reference: 640 off-targets
+[gaddam.h@explorer-02 crispritz_repro]$ echo "Enriched: $enr_count off-targets"
+Enriched: 641 off-targets
+[gaddam.h@explorer-02 crispritz_repro]$ echo "% increase: $(echo "scale=1; ($enr_count - $ref_count) * 100 / $ref_count" | bc)%"
+% increase: .1%
+[gaddam.h@explorer-02 crispritz_repro]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-02 data]$ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
+--2025-11-24 17:59:47--  http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 8043766 (7.7M) [application/x-gzip]
+Saving to: ‘refGene.txt.gz’
+
+refGene.txt.gz      100%[===================>]   7.67M  9.29MB/s    in 0.8s    
+
+2025-11-24 17:59:48 (9.29 MB/s) - ‘refGene.txt.gz’ saved [8043766/8043766]
+
+[gaddam.h@explorer-02 data]$ gunzip refGene.txt.gz
+[gaddam.h@explorer-02 data]$ cut -f3,5,6,13 refGene.txt | awk '{print $1"\t"$2"\t"$3"\t"$4}' > refGene_hg19.bed
+[gaddam.h@explorer-02 data]$ head refGene_hg19.bed
+chr3	196666747	196669405	NCBP2-AS1
+chr3	192232810	192234362	FGF12-AS2
+chr13	95364969	95368199	SOX21-AS1
+chr1	17368	17436	MIR6859-1
+chr1	17368	17436	MIR6859-2
+chr1	17368	17436	MIR6859-3
+chr1	17368	17436	MIR6859-4
+chr1	30365	30503	MIR1302-2
+chr1	30365	30503	MIR1302-9
+chr1	30365	30503	MIR1302-10
+[gaddam.h@explorer-02 data]$ wc -l refGene_hg19.bed 
+81407 refGene_hg19.bed
+[gaddam.h@explorer-02 data]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-02 data]$ Connection to login.explorer.northeastern.edu closed by remote host.
+Connection to login.explorer.northeastern.edu closed.
+client_loop: send disconnect: Broken pipe
+(base) harshinigaddam@Harshinis-MacBook-Air ~ % ssh gaddam.h@login.explorer.northeastern.edu
+gaddam.h@login.explorer.northeastern.edu's password: 
+Last login: Mon Nov 24 17:07:00 2025 from 10.110.118.90
+    _______  __ ____  __    ____  ____  __________ 
+   / ____/ |/ // __ \/ /   / __ \/ __ \/ ____/ __ \
+  / __/  |   // /_/ / /   / / / / /_/ / __/ / /_/ /
+ / /___ /   |/ ____/ /___/ /_/ / _, _/ /___/ _, _/ 
+/_____//_/|_/_/   /_____/\____/_/ |_/_____/_/ |_|  
+                                                  
++-----------------------------------------------------------+
+| You're now connected to the Explorer cluster. Visit our   |
+| website http://rc.northeastern.edu/support for links to   |
+| our service catalog, documentation, training, and consul- |
+| tations. You can also email us at rchelp@northeastern.edu |
+| to generate a help ticket.                                |
+|                                                           |
+| The Research Computing Team                               |
++-----------------------------------------------------------+
+
+
+[gaddam.h@explorer-01 ~]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-01 data]$ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
+--2025-11-25 17:27:53--  http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refGene.txt.gz
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 8043766 (7.7M) [application/x-gzip]
+Saving to: ‘refGene.txt.gz’
+
+refGene.txt.gz      100%[===================>]   7.67M  9.31MB/s    in 0.8s    
+
+2025-11-25 17:27:54 (9.31 MB/s) - ‘refGene.txt.gz’ saved [8043766/8043766]
+
+[gaddam.h@explorer-01 data]$ gunzip refGene.txt.gz
+gzip: refGene.txt already exists; do you wish to overwrite (y or n)? y
+[gaddam.h@explorer-01 data]$ cut -f3,5,6,13 refGene.txt | awk '{print $1"\t"$2"\t"$3"\t"$4}' > refGene_hg19.bed
+[gaddam.h@explorer-01 data]$ head refGene_hg19.bed
+chr3	196666747	196669405	NCBP2-AS1
+chr3	192232810	192234362	FGF12-AS2
+chr13	95364969	95368199	SOX21-AS1
+chr1	17368	17436	MIR6859-1
+chr1	17368	17436	MIR6859-2
+chr1	17368	17436	MIR6859-3
+chr1	17368	17436	MIR6859-4
+chr1	30365	30503	MIR1302-2
+chr1	30365	30503	MIR1302-9
+chr1	30365	30503	MIR1302-10
+[gaddam.h@explorer-01 data]$ wc -l refGene_hg19.bed
+81407 refGene_hg19.bed
+[gaddam.h@explorer-01 data]$ ls ~/crispritz_repro/data/refGene_hg19.bed
+/home/gaddam.h/crispritz_repro/data/refGene_hg19.bed
+[gaddam.h@explorer-01 data]$ ls -lh ~/crispritz_repro/data/ENCFF047TLW.bigBed
+-rw-r--r-- 1 gaddam.h users 25M Nov 25 17:40 /home/gaddam.h/crispritz_repro/data/ENCFF047TLW.bigBed
+[gaddam.h@explorer-01 data]$ wc -l ~/crispritz_repro/data/ENCFF047TLW.bigBed 
+89484 /home/gaddam.h/crispritz_repro/data/ENCFF047TLW.bigBed
+[gaddam.h@explorer-01 data]$ ls -lh ~/crispritz_repro/data/ENCFF005MCX.bed.gz
+-rw-r--r-- 1 gaddam.h users 775K Nov 25 17:54 /home/gaddam.h/crispritz_repro/data/ENCFF005MCX.bed.gz
+[gaddam.h@explorer-01 data]$ wc -l ~/crispritz_repro/data/ENCFF005MCX.bed.gz
+3003 /home/gaddam.h/crispritz_repro/data/ENCFF005MCX.bed.gz
+[gaddam.h@explorer-01 data]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-01 data]$ wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/bigBedToBed
+--2025-11-25 18:11:55--  http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/bigBedToBed
+Connecting to 10.99.0.130:3128... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 8712376 (8.3M)
+Saving to: ‘bigBedToBed’
+
+bigBedToBed         100%[===================>]   8.31M  9.76MB/s    in 0.9s    
+
+2025-11-25 18:11:56 (9.76 MB/s) - ‘bigBedToBed’ saved [8712376/8712376]
+
+[gaddam.h@explorer-01 data]$ chmod +x bigBedToBed
+[gaddam.h@explorer-01 data]$ ./bigBedToBed ENCFF047TLW.bigBed DHS_hg19.bed
+[gaddam.h@explorer-01 data]$ wc -l DHS_hg19.bed
+2115300 DHS_hg19.bed
+[gaddam.h@explorer-01 data]$ head DHS_hg19.bed
+chr1	10244	10357	EH37D0000001
+chr1	10433	10559	EH37D0000002
+chr1	16207	16334	EH37D0000003
+chr1	51962	52033	EH37D0000004
+chr1	54444	54515	EH37D0000005
+chr1	54550	54622	EH37D0000006
+chr1	61361	61435	EH37D0000007
+chr1	66095	66232	EH37D0000008
+chr1	66264	66344	EH37D0000009
+chr1	66345	66457	EH37D0000010
+[gaddam.h@explorer-01 data]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-01 data]$ gunzip -c ENCFF005MCX.bed.gz > CTCF_hg19.bed
+[gaddam.h@explorer-01 data]$ wc -l CTCF_hg19.bed
+47307 CTCF_hg19.bed
+[gaddam.h@explorer-01 data]$ head CTCF_hg19.bed
+chr17	45135286	45135603	.	1000	.	538.94838	-1.00000	4.61992	167
+chr1	225474981	225475263	.	1000	.	528.45034	-1.00000	4.61992	138
+chr17	80575365	80575632	.	1000	.	527.83393	-1.00000	4.61992	136
+chr15	56246047	56246348	.	1000	.	527.60164	-1.00000	4.61992	148
+chr7	25565930	25566206	.	1000	.	519.31357	-1.00000	4.61992	140
+chr19	42108558	42108840	.	1000	.	514.34396	-1.00000	4.61992	137
+chr19	40634514	40634818	.	1000	.	513.45658	-1.00000	4.61992	160
+chr2	44479428	44479747	.	1000	.	512.30779	-1.00000	4.61992	159
+chr9	133022400	133022682	.	1000	.	511.29692	-1.00000	4.61992	139
+chr5	43105709	43106002	.	1000	.	509.69769	-1.00000	4.61992	161
+[gaddam.h@explorer-01 data]$ cd ~/crispritz_repro/data
+[gaddam.h@explorer-01 data]$ ls -lh refGene_hg19.bed DHS_hg19.bed CTCF_hg19.bed
+-rw-r--r-- 1 gaddam.h users 2.9M Nov 25 18:13 CTCF_hg19.bed
+-rw-r--r-- 1 gaddam.h users  75M Nov 25 18:12 DHS_hg19.bed
+-rw-r--r-- 1 gaddam.h users 2.5M Nov 25 17:28 refGene_hg19.bed
+[gaddam.h@explorer-01 data]$ echo "=== Annotation Files Summary ==="
+echo "Genes: $(wc -l < refGene_hg19.bed) entries"
+echo "DHS sites: $(wc -l < DHS_hg19.bed) entries"
+echo "CTCF sites: $(wc -l < CTCF_hg19.bed) entries"
+=== Annotation Files Summary ===
+Genes: 81407 entries
+DHS sites: 2115300 entries
+CTCF sites: 47307 entries
+[gaddam.h@explorer-01 data]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py annotate-results \
+  results/person4/ccr5_analysis/ccr5_reference.targets.txt \
+  data/refGene_hg19.bed \
+  results/person4/ccr5_analysis/ccr5_reference_annotated.txt
+Annotation START
+READING INPUT FILES
+EXECUTING PRELIMINARY OPERATIONS
+PRELIMINARY OPERATIONS COMPLETED IN: 3.4031155109405518 seconds
+EXECUTING ANNOTATION
+Annotation: Total progress 10.0%
+Annotation: Total progress 20.0%
+Annotation: Total progress 30.0%
+Annotation: Total progress 40.0%
+Annotation: Total progress 50.0%
+Annotation: Total progress 60.0%
+Annotation: Total progress 70.0%
+Annotation: Total progress 80.0%
+Annotation: Total progress 90.0%
+Annotation: Total progress 100%
+ANNOTATION COMPLETED IN: 0.7148594856262207 seconds
+Annotation END
+Annotation runtime: 5.658962249755859 seconds
+[gaddam.h@explorer-01 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py annotate-results \
+  results/person4/ccr5_analysis/ccr5_enriched.targets.txt \
+  data/refGene_hg19.bed \
+  results/person4/ccr5_analysis/ccr5_enriched_annotated.txt
+Annotation START
+READING INPUT FILES
+EXECUTING PRELIMINARY OPERATIONS
+PRELIMINARY OPERATIONS COMPLETED IN: 3.3919472694396973 seconds
+EXECUTING ANNOTATION
+Annotation: Total progress 9.98%
+Annotation: Total progress 19.97%
+Annotation: Total progress 29.95%
+Annotation: Total progress 39.94%
+Annotation: Total progress 49.92%
+Annotation: Total progress 59.91%
+Annotation: Total progress 69.89%
+Annotation: Total progress 79.88%
+Annotation: Total progress 89.86%
+Annotation: Total progress 99.84%
+Annotation: Total progress 100%
+ANNOTATION COMPLETED IN: 0.7134954929351807 seconds
+Annotation END
+Annotation runtime: 5.592942714691162 seconds
+[gaddam.h@explorer-01 crispritz_repro]$ ls -lh results/person4/ccr5_analysis/*annotated*
+-rw-r--r-- 1 gaddam.h users 1.5M Nov 25 18:15 results/person4/ccr5_analysis/ccr5_enriched_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users  56K Nov 25 18:15 results/person4/ccr5_analysis/ccr5_enriched_annotated.txt.Annotation.targets.txt
+-rw-r--r-- 1 gaddam.h users 1.5M Nov 25 18:15 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users  56K Nov 25 18:15 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt
+
+results/person4/ccr5_analysis/annotated:
+total 0
+[gaddam.h@explorer-01 crispritz_repro]$ head -20 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.summary.txt
+-Summary_Total
+targets	1	0	11	59	568	0	0	0	0	0
+A1BG	0	0	0	0	0	0	0	0	0	0
+A1BG-AS1	0	0	0	0	0	0	0	0	0
+A1CF	0	0	0	0	0	0	0	0	0	0
+A2M	0	0	0	0	0	0	0	0	0	0
+A2M-AS1	0	0	0	0	0	0	0	0	0	0
+A2ML1	0	0	0	0	0	0	0	0	0	0
+A2MP1	0	0	0	0	0	0	0	0	0	0
+A3GALT2	0	0	0	0	0	0	0	0	0	0
+A4GALT	0	0	0	0	0	0	0	0	0	0
+A4GNT	0	0	0	0	0	0	0	0	0	0
+AA06	0	0	0	0	0	0	0	0	0	0
+AAAS	0	0	0	0	0	0	0	0	0	0
+AACS	0	0	0	0	0	0	0	0	0	0
+AACSP1	0	0	0	0	0	0	0	0	0	0
+AADAC	0	0	0	0	0	0	0	0	0	0
+AADACL2	0	0	0	0	0	0	0	0	0	0
+AADACL2-AS1	0	0	0	0	0	0	0	0	0
+AADACL3	0	0	0	0	0	0	0	0	0	0
+[gaddam.h@explorer-01 crispritz_repro]$ head -20 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt
+#Bulge type	crRNA	DNA	Chromosome	Position	Cluster PositioDirection	Mismatches	Bulge Size	Total	Annotation_Type
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAtAGaTCAGAGgTGGCtTGG	chr13	28648211	28648211	-	4	0	4	FLT3
+X	AAAACAGGTCAGAGATGGCCNNN	AAgACAGGgCAGAGAaGGCtTGG	chr5	4246073	4246073n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAgtGGTCAGAGtTGGCtGGG	chr5	90760113	90760113	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGGTaAGAGATGcgtTGG	chr2	155057904	155057904	-	4	0	4	GALNT13,GALNT13
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGaTCAGAGtTGcCaGGG	chr21	33538375	33538375	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAcaAGGaCAGAGATGGCaAGG	chr21	38671546	38671546	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAagGGTgAGAGATGGCgGGG	chr21	23483563	23483563	-	4	0	4	LINC00308
+X	AAAACAGGTCAGAGATGGCCNNN	tAAAaAGGTCAGtGATtGCCAGG	chr21	22866054	22866054	-	4	0	4	NCAM2
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAagaGTCAGAGAgGGCCAGG	chr21	39952169	39952169	-	4	0	4	ERG,ERG,ERG,ERG,ERG,ERG
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGGTgAaAcAgGGCCGGG	chr21	33389824	33389824	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAaAaaTCAGAGcTGGCCAGG	chr21	45763967	45763967	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAtAGGTaAGtGtTGGCCAGG	chr21	28469706	28469706	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	cAAAaAGtTaAGAGATGGCCGGG	chr21	36403347	36403347	+	4	0	4	RUNX1
+X	AAAACAGGTCAGAGATGGCCNNN	AgAAggGGaCAGAGATGGCCGGG	chr21	31829948	31829948	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAaAaaTCAGAtATGGCCAGG	chr21	37569522	37569522	-	4	0	4	DOP1B,DOP1B
+X	AAAACAGGTCAGAGATGGCCNNN	AAgACAGGTCtGAaATGGgCTGG	chr1	184177830	184177830	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAgCAGGTttGAGATGGgCTGG	chr1	160340258	160340258	-	4	0	4	NHLH1
+X	AAAACAGGTCAGAGATGGCCNNN	tAAACAGGTCAcAGgTGGgCAGG	chr1	527947	527947	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAcCAaGTCAGAGAgGGgCGGG	chr1	9037028	9037028n
+[gaddam.h@explorer-01 crispritz_repro]$ echo "=== REFERENCE GENOME ==="
+head -10 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.summary.txt
+echo ""
+=== REFERENCE GENOME ===
+-Summary_Total
+targets	1	0	11	59	568	0	0	0	0	0
+A1BG	0	0	0	0	0	0	0	0	0	0
+A1BG-AS1	0	0	0	0	0	0	0	0	0
+A1CF	0	0	0	0	0	0	0	0	0	0
+A2M	0	0	0	0	0	0	0	0	0	0
+A2M-AS1	0	0	0	0	0	0	0	0	0	0
+A2ML1	0	0	0	0	0	0	0	0	0	0
+A2MP1	0	0	0	0	0	0	0	0	0	0
+A3GALT2	0	0	0	0	0	0	0	0	0	0
+
+[gaddam.h@explorer-01 crispritz_repro]$ echo "=== ENRICHED GENOME ==="
+head -10 results/person4/ccr5_analysis/ccr5_enriched_annotated.txt.Annotation.summary.txt
+=== ENRICHED GENOME ===
+-Summary_Total
+targets	1	0	11	59	569	0	0	0	0	0
+A1BG	0	0	0	0	0	0	0	0	0	0
+A1BG-AS1	0	0	0	0	0	0	0	0	0
+A1CF	0	0	0	0	0	0	0	0	0	0
+A2M	0	0	0	0	0	0	0	0	0	0
+A2M-AS1	0	0	0	0	0	0	0	0	0	0
+A2ML1	0	0	0	0	0	0	0	0	0	0
+A2MP1	0	0	0	0	0	0	0	0	0	0
+A3GALT2	0	0	0	0	0	0	0	0	0	0
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ head -50 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.summary.txt
+-Summary_Total
+targets	1	0	11	59	568	0	0	0	0	0
+A1BG	0	0	0	0	0	0	0	0	0	0
+A1BG-AS1	0	0	0	0	0	0	0	0	0
+A1CF	0	0	0	0	0	0	0	0	0	0
+A2M	0	0	0	0	0	0	0	0	0	0
+A2M-AS1	0	0	0	0	0	0	0	0	0	0
+A2ML1	0	0	0	0	0	0	0	0	0	0
+A2MP1	0	0	0	0	0	0	0	0	0	0
+A3GALT2	0	0	0	0	0	0	0	0	0	0
+A4GALT	0	0	0	0	0	0	0	0	0	0
+A4GNT	0	0	0	0	0	0	0	0	0	0
+AA06	0	0	0	0	0	0	0	0	0	0
+AAAS	0	0	0	0	0	0	0	0	0	0
+AACS	0	0	0	0	0	0	0	0	0	0
+AACSP1	0	0	0	0	0	0	0	0	0	0
+AADAC	0	0	0	0	0	0	0	0	0	0
+AADACL2	0	0	0	0	0	0	0	0	0	0
+AADACL2-AS1	0	0	0	0	0	0	0	0	0
+AADACL3	0	0	0	0	0	0	0	0	0	0
+AADACL4	0	0	0	0	0	0	0	0	0	0
+AADACP1	0	0	0	0	0	0	0	0	0	0
+AADAT	0	0	0	0	0	0	0	0	0	0
+AAGAB	0	0	0	0	0	0	0	0	0	0
+AAK1	0	0	0	0	0	0	0	0	0	0
+AAMDC	0	0	0	0	0	0	0	0	0	0
+AAMP	0	0	0	0	0	0	0	0	0	0
+AANAT	0	0	0	0	0	0	0	0	0	0
+AAR2	0	0	0	0	0	0	0	0	0	0
+AARD	0	0	0	0	0	0	0	0	0	0
+AARS1	0	0	0	0	0	0	0	0	0	0
+AARS2	0	0	0	0	0	0	0	0	0	0
+AARSD1	0	0	0	0	0	0	0	0	0	0
+AASDH	0	0	0	0	0	0	0	0	0	0
+AASDHPPT	0	0	0	0	0	0	0	0	0
+AASS	0	0	0	0	0	0	0	0	0	0
+AATBC	0	0	0	0	0	0	0	0	0	0
+AATF	0	0	0	0	0	0	0	0	0	0
+AATK	0	0	0	0	0	0	0	0	0	0
+ABALON	0	0	0	0	0	0	0	0	0	0
+ABAT	0	0	0	0	0	0	0	0	0	0
+ABCA1	0	0	0	0	0	0	0	0	0	0
+ABCA10	0	0	0	0	0	0	0	0	0	0
+ABCA11P	0	0	0	0	0	0	0	0	0	0
+ABCA12	0	0	0	0	0	0	0	0	0	0
+ABCA13	0	0	0	0	0	0	0	0	0	0
+ABCA17P	0	0	0	0	0	0	0	0	0	0
+ABCA2	0	0	0	0	0	0	0	0	0	0
+ABCA3	0	0	0	0	0	0	0	0	0	0
+ABCA4	0	0	0	0	0	0	0	0	0	0
+[gaddam.h@explorer-01 crispritz_repro]$ head -20 results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt
+#Bulge type	crRNA	DNA	Chromosome	Position	Cluster PositioDirection	Mismatches	Bulge Size	Total	Annotation_Type
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAtAGaTCAGAGgTGGCtTGG	chr13	28648211	28648211	-	4	0	4	FLT3
+X	AAAACAGGTCAGAGATGGCCNNN	AAgACAGGgCAGAGAaGGCtTGG	chr5	4246073	4246073n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAgtGGTCAGAGtTGGCtGGG	chr5	90760113	90760113	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGGTaAGAGATGcgtTGG	chr2	155057904	155057904	-	4	0	4	GALNT13,GALNT13
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGaTCAGAGtTGcCaGGG	chr21	33538375	33538375	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAcaAGGaCAGAGATGGCaAGG	chr21	38671546	38671546	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAagGGTgAGAGATGGCgGGG	chr21	23483563	23483563	-	4	0	4	LINC00308
+X	AAAACAGGTCAGAGATGGCCNNN	tAAAaAGGTCAGtGATtGCCAGG	chr21	22866054	22866054	-	4	0	4	NCAM2
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAagaGTCAGAGAgGGCCAGG	chr21	39952169	39952169	-	4	0	4	ERG,ERG,ERG,ERG,ERG,ERG
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGGTgAaAcAgGGCCGGG	chr21	33389824	33389824	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAaAaaTCAGAGcTGGCCAGG	chr21	45763967	45763967	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAtAGGTaAGtGtTGGCCAGG	chr21	28469706	28469706	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	cAAAaAGtTaAGAGATGGCCGGG	chr21	36403347	36403347	+	4	0	4	RUNX1
+X	AAAACAGGTCAGAGATGGCCNNN	AgAAggGGaCAGAGATGGCCGGG	chr21	31829948	31829948	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAaAaaTCAGAtATGGCCAGG	chr21	37569522	37569522	-	4	0	4	DOP1B,DOP1B
+X	AAAACAGGTCAGAGATGGCCNNN	AAgACAGGTCtGAaATGGgCTGG	chr1	184177830	184177830	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAgCAGGTttGAGATGGgCTGG	chr1	160340258	160340258	-	4	0	4	NHLH1
+X	AAAACAGGTCAGAGATGGCCNNN	tAAACAGGTCAcAGgTGGgCAGG	chr1	527947	527947	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAcCAaGTCAGAGAgGGgCGGG	chr1	9037028	9037028n
+[gaddam.h@explorer-01 crispritz_repro]$ grep -c "exon" results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt || echo "0"
+grep -c "intron" results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt || echo "0"
+grep -c "promoter" results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt || echo "0"
+0
+0
+0
+0
+0
+0
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ echo "Reference: $(wc -l < results/person4/ccr5_analysis/ccr5_reference.targets.txt)"
+echo "Enriched: $(wc -l < results/person4/ccr5_analysis/ccr5_enriched.targets.txt)"
+Reference: 640
+Enriched: 641
+[gaddam.h@explorer-01 crispritz_repro]$ echo ""
+echo "Gene hits (reference):"
+grep -v "^n$" results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | grep -v "^#" | wc -l
+
+Gene hits (reference):
+639
+[gaddam.h@explorer-01 crispritz_repro]$ echo "Intergenic (reference):"
+grep "  n$" results/person4/ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | wc -l
+Intergenic (reference):
+323
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro/results/person4
+[gaddam.h@explorer-01 person4]$ cat > analyze_guides.sh << 'EOF'
+> 
+> EOF
+[gaddam.h@explorer-01 person4]$ #!/bin/bash
+[gaddam.h@explorer-01 person4]$ echo "Analyzing CCR5 guides..."
+Analyzing CCR5 guides...
+[gaddam.h@explorer-01 person4]$ mkdir -p reports
+[gaddam.h@explorer-01 person4]$ awk -F'\t' 'NR>1 {print $2}' ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | \
+  sort -u > reports/all_guides.txt
+[gaddam.h@explorer-01 person4]$ echo "Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits,Intergenic" > reports/guide_summary.csv
+[gaddam.h@explorer-01 person4]$ ref_count=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | wc -l)
+[gaddam.h@explorer-01 person4]$ enr_count=$(grep -F "$guide" ccr5_analysis/ccr5_enriched_annotated.txt.Annotation.targets.txt | wc -l)
+[gaddam.h@explorer-01 person4]$ gene_hits=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | \
+    awk -F'\t' '{print $NF}' | grep -v "^n$" | wc -l)
+[gaddam.h@explorer-01 person4]$  intergenic=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | \
+    awk -F'\t' '{print $NF}' | grep "^n$" | wc -l)
+[gaddam.h@explorer-01 person4]$  echo "$guide,$ref_count,$enr_count,$gene_hits,$intergenic"
+done < reports/all_guides.txt >> reports/guide_summary.csv
+,640,641,317,323
+-bash: syntax error near unexpected token `done'
+[gaddam.h@explorer-01 person4]$ cd ~/crispritz_repro/results/person4
+[gaddam.h@explorer-01 person4]$ cat > analyze_guides.sh << 'EOF'
+#!/bin/bash
+
+echo "Analyzing CCR5 guides..."
+
+# Create output directory
+mkdir -p reports
+
+# Extract guide sequences
+awk -F'\t' 'NR>1 {print $2}' ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | \
+  sort -u > reports/all_guides.txt
+
+# For each guide, count off-targets
+echo "Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits,Intergenic" > reports/guide_summary.csv
+
+while read guide; do
+  # Count in reference
+  ref_count=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | wc -l)
+  
+  # Count in enriched
+  enr_count=$(grep -F "$guide" ccr5_analysis/ccr5_enriched_annotated.txt.AnnotatEOFo "Done! Results in reports/guide_summary.csv"mmary.csvc"_annotated.txt.Annot
+[gaddam.h@explorer-01 person4]$ cd ~/crispritz_repro/results/person4
+[gaddam.h@explorer-01 person4]$ rm -f analyze_guides.sh
+[gaddam.h@explorer-01 person4]$ cat > analyze_guides.sh << 'ENDOFSCRIPT'
+#!/bin/bash
+
+echo "Analyzing CCR5 guides..."
+mkdir -p reports
+
+# Extract unique guide sequences
+awk -F'\t' 'NR>1 {print $2}' ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | sort -u > reports/all_guides.txt
+
+# Create CSV header
+echo "Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits,Intergenic" > reports/guide_summary.csv
+
+# Process each guide
+while read guide; do
+  ref_count=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | wc -l)
+  enr_count=$(grep -F "$guide" ccr5_analysis/ccr5_enriched_annotated.txt.Annotation.targets.txt | wc -l)
+  gene_hits=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | awk -F'\t' '{print $NF}' | grep -v "^n$" | wc -l)
+  intergenic=$(grep -F "$guide" ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt | awk -F'\t' '{print $NF}' | grep "^n$" | wc -l)
+  echo "$guide,$ref_count,$enr_count,$gene_hits,$intergenic"
+done < reports/all_guides.txt >> reports/guide_summary.csv
+
+echo "Done! Check reports/guide_summary.csv"
+./analyze_guides.shides.sh
+Analyzing CCR5 guides...
+Done! Check reports/guide_summary.csv
+[gaddam.h@explorer-01 person4]$ head -20 reports/guide_summary.csv
+Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits,Intergenic
+AAAACAGGTCAGAGATGGCCNNN,639,640,316,323
+[gaddam.h@explorer-01 person4]$ wc -l reports/guide_summary.csv
+2 reports/guide_summary.csv
+[gaddam.h@explorer-01 person4]$ sort -t',' -k2 -n reports/guide_summary.csv | head -10
+Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits,Intergenic
+AAAACAGGTCAGAGATGGCCNNN,639,640,316,323
+[gaddam.h@explorer-01 person4]$ wc -l reports/all_guides.txt
+1 reports/all_guides.txt
+[gaddam.h@explorer-01 person4]$ head -10 reports/all_guides.txt
+AAAACAGGTCAGAGATGGCCNNN
+[gaddam.h@explorer-01 person4]$ head -5 ccr5_analysis/ccr5_reference_annotated.txt.Annotation.targets.txt
+#Bulge type	crRNA	DNA	Chromosome	Position	Cluster Position	Direction	Mismatches	Bulge SizeTotal	Annotation_Type
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAtAGaTCAGAGgTGGCtTGG	chr13	28648211	28648211	-	4	0	4	FLT3
+X	AAAACAGGTCAGAGATGGCCNNN	AAgACAGGgCAGAGAaGGCtTGG	chr5	4246073	4246073	-	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAAgtGGTCAGAGtTGGCtGGG	chr5	90760113	90760113	+	4	0	4	n
+X	AAAACAGGTCAGAGATGGCCNNN	AAAACAGGTaAGAGATGcgtTGG	chr2	155057904	155057904	-	4	0	4	GALNT13,GALNT13
+[gaddam.h@explorer-01 person4]$ head -10 ~/crispritz_repro/guides/ccr5_guides.txt
+[gaddam.h@explorer-01 person4]$ wc -l ~/crispritz_repro/guides/ccr5_guides.txt
+0 /home/gaddam.h/crispritz_repro/guides/ccr5_guides.txt
+[gaddam.h@explorer-01 person4]$ cd ~/crispritz_repro/guides
+[gaddam.h@explorer-01 guides]$ ls -lh ccr5_guides.txt
+-rw-r--r-- 1 gaddam.h users 2.6K Nov 24 17:18 ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ dos2unix ccr5_guides.txt
+dos2unix: converting file ccr5_guides.txt to Unix format...
+[gaddam.h@explorer-01 guides]$ wc -l ccr5_guides.txt
+0 ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ head -10 ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ dos2unix ccr5_guides.txt
+dos2unix: converting file ccr5_guides.txt to Unix format...
+[gaddam.h@explorer-01 guides]$ cat -A ccr5_guides.txt | head -20
+AAAACAGGTCAGAGATGGCC^MAAAGATAGTCATCTTGGGGC^MAAAGCCAGGACGGTCACCTT^MAAATGAGAAGAAGAGGCACA^MAACACCAGTGAGTAGAGCGG^MAACACCTTCCAGGAATTCTT^MAAGACCTTCTTTTTGAGATC^MAAGCCAGGACGGTCACCTTT^MAAGGAAAAACAGGTCAGAGA^MAAGTGTGATCACTTGGGTGG^MACAATGTGTCAACTCTTGAC^MACACAGCATGGACGACAGCC^MACAGCATTTGCAGAAGCGTT^MACATTAAAGATAGTCATCTT^MAGAAGAGGCACAGGGCTGTG^MAGAATTCCTGGAAGGTGTTC^MAGATATTTCCTGCTCCCCAG^MAGATGACTATCTTTAATGTC^MAGCCAGGACGGTCACCTTTG^MAGCGTTTGGCAATGTGCTTT^MAGGAGAAGGACAATGTTGTA^MAGTAGAGCGGAGGCAGGAGG^MAGTTTACACCCGATCCACTG^MATAATTGCAGTAGCTCTAAC^MATATCTGTGGGCTTGTGACA^MATCTGGTAAAGATGATTCCT^MATGAACACCAGTGAGTAGAG^MATGCAGGTGACAGAGACTCT^MATTTCCAAAGTCCCACTGGG^MCAATGTGTCAACTCTTGACA^MCACACTTGTCACCACCCCAA^MCACCCCAAAGGTGACCGTCC^MCACCCGATCCACTGGGGAGC^MCAGAATTGATACTGACTGTA^MCAGAGATGGCCAGGTTGAGC^MCAGATGACCATGACAAGCAG^MCAGCATAGTGAGCCCAGAAG^MCAGGACGGTCACCTTTGGGG^MCAGGAGAAGGACAATGTTGT^MCAGGCCAAAGAATTCCTGGA^MCAGGTTGGACCAAGCTATGC^MCAGTTTACACCCGATCCACT^MCATACAGTCAGTATCAATTC^MCATCATCTATGCCTTTGTCG^MCATTAAAGATAGTCATCTTG^MCCAGGTACCTATCGATTGTC^MCCAGTGAGTAGAGCGGAGGC^MCCATCATCTATGCCTTTGTC^MCCCAGAAGGGGACAGTAAGA^MCCCATCATCTATGCCTTTGT^MCCCGACAAAGGCATAGATGA^MCCGACAAAGGCATAGATGAT^MCCTGACAATCGATAGGTACC^MCCTGCCTCCGCTCTACTCAC^MCCTGGAAGGTGTTCAGGAGA^MCCTTCTCCTGAACACCTTCC^MCCTTCTTACTGTCCCCTTCT^MCGACAAAGGCATAGATGATG^MCTCACTATGCTGCCGCCCAG^MCTCGCTCGGGAGCCTCTTGC^MCTGTGTTTGCTTTAAAAGCC^MCTGTTCTATTTTCCAGCAAG^MCTTCACATTGATTTTTTGGC^MCTTTTAAAGCAAACACAGCA^MGAAATGAGAAGAAGAGGCAC^MGAATCCTAAAAACTCTGCTT^MGACAAGTGTGATCACTTGGG^MGACACCGAAGCAGAGTTTTT^MGACATTAAAGATAGTCATCT^MGAGAAAATAAACAATCATGA^MGATCTGGTAAAGATGATTCC^MGATTGTTTATTTTCTCTTCT^MGCAGCATAGTGAGCCCAGAA^MGCTGCCGCCCAGTGGGACTT^MGCTGTGTTTGCGTCTCTCCC^MGCTTTTGGAAGAAGACTAAG^MGGACAGTAAGAAGGAAAAAC^MGGCAGCATAGTGAGCCCAGA^MGGGGAGCAGGAAATATCTGT^MGGTACCTATCGATTGTCAGG^MGGTCCTGCCGCTGCTTGTCA^MGGTGACAAGTGTGATCACTT^MGGTGTCGAAATGAGAAGAAG^MGGTGTTCATCTTTGGTTTTG^MGTAAACTGAGCTTGCTCGCT^MGTAGAGCGGAGGCAGGAGGC^MGTATGGAAAATGAGAGCTGC^MGTCATGGTCATCTGCTACTC^MGTGAGTAGAGCGGAGGCAGG^MGTGTTCATCTTTGGTTTTGT^MGTTTGCTTTAAAAGCCAGGA^MTAAACTGAGCTTGCTCGCTC^MTAATAATTGATGTCATAGAT^MTACTCACTGGTGTTCATCTT^MTAGAGCTACTGCAATTATTC^MTATTCAGGCCAAAGAATTCC^MTATTTTATAGGCTTCTTCTC^MTCACTATGCTGCCGCCCAGT^MTCAGCCTTTTGCAGTTTATC^MTCAGTTTACACCCGATCCAC^MTCATCCTCCTGACAATCGAT^MTCATCCTGATAAACTGCAAA^MTCCTTCTTACTGTCCCCTTC^MTCTCTGTCACCTGCATAGCT^MTCTGAACTTCTCCCCGACAA^MTGACATCAATTATTATACAT^MTGACATCTACCTGCTCAACC^MTGACCATGACAAGCAGCGGC^MTGATTGTTTATTTTCTCTTC^MTGCAGGTGACAGAGACTCTT^MTGGGGAGCAGGAAATATCTG^MTGGTGACAAGTGTGATCACT^MTGGTTTTGTGGGCAACATGC^MTGTATTTCCAAAGTCCCACT^MTGTCATGGTCATCTGCTACT^MTTCACATTGATTTTTTGGCA^MTTCCTGCTCCCCAGTGGATC^MTTGACAGGGCTCTATTTTAT^MTTGCAGTAGCTCTAACAGGT^MTTGTATTTCCAAAGTCCCAC^MTTTACCAGATCTCAAAAAGA^MTTTCCTGCTCCCCAGTGGAT^MTTTGCTTCACATTGATTTTT^MTTTTGCAGTTTATCAGGATG^M^M[gaddam.h@explorer-01 guides]$ cd ~/crispritz_repro/cd ~/crispritz_repro/guides
+[gaddam.h@explorer-01 guides]$ tr '\r' '\n' < ccr5_guides.txt > ccr5_guides_fixed.txt
+[gaddam.h@explorer-01 guides]$ mv ccr5_guides_fixed.txt ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ wc -l ccr5_guides.txt
+125 ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ head -10 ccr5_guides.txt
+AAAACAGGTCAGAGATGGCC
+AAAGATAGTCATCTTGGGGC
+AAAGCCAGGACGGTCACCTT
+AAATGAGAAGAAGAGGCACA
+AACACCAGTGAGTAGAGCGG
+AACACCTTCCAGGAATTCTT
+AAGACCTTCTTTTTGAGATC
+AAGCCAGGACGGTCACCTTT
+AAGGAAAAACAGGTCAGAGA
+AAGTGTGATCACTTGGGTGG
+[gaddam.h@explorer-01 guides]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ echo "Starting CORRECTED CCR5 searches at $(date)"
+Starting CORRECTED CCR5 searches at Tue Nov 25 06:53:25 PM EST 2025
+[gaddam.h@explorer-01 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py search \
+  genome_library/NGG_2_hg19_reference \
+  pam/pamNGG.txt \
+  guides/ccr5_guides.txt \
+  results/person4/ccr5_analysis/ccr5_reference_FIXED \
+  -mm 4 \
+  -bDNA 0 \
+  -bRNA 0 \
+  -th 4 \
+  -t
+Search START
+USED THREADS 4
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+The character () is not part of the IUPAC nucleotide nomenclature
+ANALYZING CHROMOSOME chrUn_gl000226 (Total progress: 0.7%)
+ANALYZING CHROMOSOME chr18_gl000207_random (Total progress: 1.5%)
+ANALYZING CHROMOSOME chrM (Total progress: 2.2%)
+ANALYZING CHROMOSOME chrUn_gl000227 (Total progress: 2.9%)
+ANALYZING CHROMOSOME chr17_gl000203_random (Total progress: 3.6%)
+ANALYZING CHROMOSOME chrUn_gl000229 (Total progress: 4.4%)
+ANALYZING CHROMOSOME chrUn_gl000245 (Total progress: 5.1%)
+ANALYZING CHROMOSOME chrUn_gl000214 (Total progress: 5.8%)
+ANALYZING CHROMOSOME chrUn_gl000235 (Total progress: 6.6%)
+ANALYZING CHROMOSOME chrUn_gl000221 (Total progress: 7.3%)
+ANALYZING CHROMOSOME chrUn_gl000231 (Total progress: 8.0%)
+ANALYZING CHROMOSOME chrUn_gl000246 (Total progress: 8.8%)
+ANALYZING CHROMOSOME chr17_gl000204_random (Total progress: 9.5%)
+ANALYZING CHROMOSOME chr8_gl000196_random (Total progress: 10.2%)
+ANALYZING CHROMOSOME chrUn_gl000241 (Total progress: 10.9%)
+ANALYZING CHROMOSOME chrUn_gl000230 (Total progress: 11.7%)
+ANALYZING CHROMOSOME chrUn_gl000239 (Total progress: 12.4%)
+ANALYZING CHROMOSOME chrUn_gl000228 (Total progress: 13.9%)
+ANALYZING CHROMOSOME chrUn_gl000247 (Total progress: 13.9%)
+ANALYZING CHROMOSOME chrUn_gl000238 (Total progress: 14.6%)
+ANALYZING CHROMOSOME chr1_gl000192_random (Total progress: 16.1%)
+ANALYZING CHROMOSOME chr19_gl000209_random (Total progress: 16.1%)
+ANALYZING CHROMOSOME chrUn_gl000233 (Total progress: 16.8%)
+ANALYZING CHROMOSOME chr19_gl000208_random (Total progress: 17.5%)
+ANALYZING CHROMOSOME chr9_gl000198_random (Total progress: 18.2%)
+ANALYZING CHROMOSOME chrUn_gl000236 (Total progress: 19.0%)
+ANALYZING CHROMOSOME chrUn_gl000240 (Total progress: 19.7%)
+ANALYZING CHROMOSOME chrUn_gl000217 (Total progress: 20.4%)
+ANALYZING CHROMOSOME chrUn_gl000232 (Total progress: 21.2%)
+ANALYZING CHROMOSOME chrUn_gl000234 (Total progress: 21.9%)
+ANALYZING CHROMOSOME chr21_gl000210_random (Total progress: 22.6%)
+ANALYZING CHROMOSOME chrUn_gl000248 (Total progress: 23.4%)
+ANALYZING CHROMOSOME chrUn_gl000211 (Total progress: 24.1%)
+ANALYZING CHROMOSOME chrUn_gl000244 (Total progress: 24.8%)
+ANALYZING CHROMOSOME chrUn_gl000224 (Total progress: 25.5%)
+ANALYZING CHROMOSOME chrUn_gl000249 (Total progress: 26.3%)
+ANALYZING CHROMOSOME chr9_gl000199_random (Total progress: 27.0%)
+ANALYZING CHROMOSOME chrUn_gl000216 (Total progress: 27.7%)
+ANALYZING CHROMOSOME chrUn_gl000243 (Total progress: 28.5%)
+ANALYZING CHROMOSOME chrUn_gl000237 (Total progress: 29.2%)
+ANALYZING CHROMOSOME chrUn_gl000242 (Total progress: 29.9%)
+ANALYZING CHROMOSOME chrUn_gl000219 (Total progress: 30.7%)
+ANALYZING CHROMOSOME chr8_gl000197_random (Total progress: 31.4%)
+ANALYZING CHROMOSOME chr17_gl000206_random (Total progress: 32.1%)
+ANALYZING CHROMOSOME chr11_gl000202_random (Total progress: 32.8%)
+ANALYZING CHROMOSOME chr17_gl000205_random (Total progress: 33.6%)
+ANALYZING CHROMOSOME chr9_gl000201_random (Total progress: 34.3%)
+ANALYZING CHROMOSOME chrUn_gl000213 (Total progress: 35.0%)
+ANALYZING CHROMOSOME chr1_gl000191_random (Total progress: 35.8%)
+ANALYZING CHROMOSOME chr7_gl000195_random (Total progress: 36.5%)
+ANALYZING CHROMOSOME chrUn_gl000218 (Total progress: 37.2%)
+ANALYZING CHROMOSOME chr9_gl000200_random (Total progress: 38.0%)
+ANALYZING CHROMOSOME chr4_gl000193_random (Total progress: 38.7%)
+ANALYZING CHROMOSOME chrUn_gl000223 (Total progress: 39.4%)
+ANALYZING CHROMOSOME chr17_ctg5_hap1 (Total progress: 40.1%)
+ANALYZING CHROMOSOME chrUn_gl000215 (Total progress: 40.9%)
+ANALYZING CHROMOSOME chrUn_gl000220 (Total progress: 41.6%)
+ANALYZING CHROMOSOME chrUn_gl000225 (Total progress: 42.3%)
+ANALYZING CHROMOSOME chrUn_gl000222 (Total progress: 43.1%)
+ANALYZING CHROMOSOME chrUn_gl000212 (Total progress: 43.8%)
+ANALYZING CHROMOSOME chr4_gl000194_random (Total progress: 44.5%)
+ANALYZING CHROMOSOME chr4_ctg9_hap1 (Total progress: 45.3%)
+ANALYZING CHROMOSOME chr17 (Total progress: 46.0%)
+ANALYZING CHROMOSOME chr6_apd_hap1 (Total progress: 46.7%)
+Killed
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro/guides
+[gaddam.h@explorer-01 guides]$ grep -v "^$" ccr5_guides.txt > ccr5_guides_clean.txt
+[gaddam.h@explorer-01 guides]$ mv ccr5_guides_clean.txt ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ wc -l ccr5_guides.txt
+124 ccr5_guides.txt
+[gaddam.h@explorer-01 guides]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ cat > run_ccr5_search.sh << 'EOF'
+#!/bin/bash
+#SBATCH --job-name=ccr5_search
+#SBATCH --output=logs/ccr5_search_%j.out
+#SBATCH --error=logs/ccr5_search_%j.err
+#SBATCH --time=02:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --partition=short
+
+cd ~/crispritz_repro
+
+echo "Starting CCR5 reference search at $(date)"
+
+apptainer exec crispritz.sif crispritz.py search \
+  genome_library/NGG_2_hg19_reference \
+  pam/pamNGG.txt \
+  guides/ccr5_guides.txt \
+  results/person4/ccr5_analysis/ccr5_reference_FIXED \
+  -mm 4 \
+  -bDNA 0 \
+  -bRNA 0 \
+  -th 4 \
+EOFo "Job completed at $(date)"ysis/ccr5_*_FIXED.targets.txt
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ rm -f run_ccr5_search.sh
+[gaddam.h@explorer-01 crispritz_repro]$ nano run_ccr5_search.sh
+[gaddam.h@explorer-01 crispritz_repro]$ mkdir -p logs
+[gaddam.h@explorer-01 crispritz_repro]$ sbatch run_ccr5_search.sh
+Submitted batch job 2964437
+[gaddam.h@explorer-01 crispritz_repro]$ squeue -u gaddam.h
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           2964437     short ccr5_sea gaddam.h  R       0:08      1 c0616
+[gaddam.h@explorer-01 crispritz_repro]$ grep "Starting CCR5 reference" logs/ccr5_search_2964437.out
+Starting CCR5 reference search at Tue Nov 25 07:01:29 PM EST 2025
+[gaddam.h@explorer-01 crispritz_repro]$ date
+Tue Nov 25 07:44:47 PM EST 2025
+[gaddam.h@explorer-01 crispritz_repro]$ tail -20 logs/ccr5_search_2964437.out
+ANALYZING CHROMOSOME chr15 (Total progress: 93.5%)
+ANALYZING CHROMOSOME chr5 (Total progress: 94.2%)
+ANALYZING CHROMOSOME chr14 (Total progress: 94.9%)
+ANALYZING CHROMOSOME chr11 (Total progress: 95.7%)
+ANALYZING CHROMOSOME chr13 (Total progress: 96.4%)
+ANALYZING CHROMOSOME chr20 (Total progress: 97.1%)
+ANALYZING CHROMOSOME chr6 (Total progress: 97.8%)
+ANALYZING CHROMOSOME chr8 (Total progress: 98.6%)
+ANALYZING CHROMOSOME chr18 (Total progress: 99.3%)
+ANALYZING CHROMOSOME 22 (Total progress: 100.0%)
+-----------------------
+TOTAL TIME:	83.6
+Search START
+Search END
+Search runtime: 84.13183903694153 seconds
+Completed enriched search at Tue Nov 25 07:04:20 PM EST 2025
+  32992 results/person4/ccr5_analysis/ccr5_enriched_FIXED.targets.txt
+  32668 results/person4/ccr5_analysis/ccr5_reference_FIXED.targets.txt
+  65660 total
+Job completed at Tue Nov 25 07:04:20 PM EST 2025
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro
+[gaddam.h@explorer-01 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py annotate-results \
+  results/person4/ccr5_analysis/ccr5_reference_FIXED.targets.txt \
+  data/refGene_hg19.bed \
+  results/person4/ccr5_analysis/ccr5_reference_FIXED_annotated.txt
+Annotation START
+READING INPUT FILES
+EXECUTING PRELIMINARY OPERATIONS
+PRELIMINARY OPERATIONS COMPLETED IN: 4.312579154968262 seconds
+EXECUTING ANNOTATION
+Annotation: Total progress 10.0%
+Annotation: Total progress 20.0%
+Annotation: Total progress 29.99%
+Annotation: Total progress 39.99%
+Annotation: Total progress 49.99%
+Annotation: Total progress 59.99%
+Annotation: Total progress 69.98%
+Annotation: Total progress 79.98%
+Annotation: Total progress 89.98%
+Annotation: Total progress 99.98%
+Annotation: Total progress 100%
+ANNOTATION COMPLETED IN: 86.41231203079224 seconds
+Annotation END
+Annotation runtime: 96.79396605491638 seconds
+[gaddam.h@explorer-01 crispritz_repro]$ apptainer exec crispritz.sif crispritz.py annotate-results \
+  results/person4/ccr5_analysis/ccr5_enriched_FIXED.targets.txt \
+  data/refGene_hg19.bed \
+  results/person4/ccr5_analysis/ccr5_enriched_FIXED_annotated.txt
+Annotation START
+READING INPUT FILES
+EXECUTING PRELIMINARY OPERATIONS
+PRELIMINARY OPERATIONS COMPLETED IN: 3.392439126968384 seconds
+EXECUTING ANNOTATION
+Annotation: Total progress 10.0%
+Annotation: Total progress 20.0%
+Annotation: Total progress 30.0%
+Annotation: Total progress 40.0%
+Annotation: Total progress 50.0%
+Killed
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro
+                                        apptainer exec crispritz.sif crispritz.py annotate-results   results/person4/ccr5_analysis/ccr5_enriched_FIXED.targets.txt   data/rcd ~/crispritz_repro                                                                       _                                       ^C
+[gaddam.h@explorer-01 crispritz_repro]$ cat > run_annotation.sh << 'ENDSCRIPT'
+#!/bin/bash
+#SBATCH --job-name=ccr5_annotate
+#SBATCH --output=logs/ccr5_annotate_%j.out
+#SBATCH --error=logs/ccr5_annotate_%j.err
+#SBATCH --time=00:30:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=8G
+#SBATCH --partition=short
+
+cd ~/crispritz_repro
+
+echo "Starting annotation at $(date)"
+
+apptainer exec crispritz.sif crispritz.py annotate-results \
+  results/person4/ccr5_analysis/ccr5_enriched_FIXED.targets.txt \
+  data/refGene_hg19.bed \
+  results/person4/ccr5_analysis/ccr5_enriched_FIXED_annotated.txt
+
+echo "Completed at $(date)"
+ls -lh results/person4/ccr5_analysis/*FIXED_annotated*
+ENDSCRIPT
+[gaddam.h@explorer-01 crispritz_repro]$ sbatch run_annotation.sh
+Submitted batch job 2964812
+[gaddam.h@explorer-01 crispritz_repro]$ squeue -u gaddam.h
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           2964812     short ccr5_ann gaddam.h  R       0:05      1 c0683
+[gaddam.h@explorer-01 crispritz_repro]$ tail -f logs/ccr5_annotate_*.out
+Annotation: Total progress 100%
+ANNOTATION COMPLETED IN: 23.932737112045288 seconds
+Annotation START
+Annotation END
+Annotation runtime: 27.464772701263428 seconds
+Completed at Tue Nov 25 07:55:35 PM EST 2025
+-rw-r--r-- 1 gaddam.h users  93M Nov 25 19:55 results/person4/ccr5_analysis/ccr5_enriched_FIXED_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users 2.9M Nov 25 19:55 results/person4/ccr5_analysis/ccr5_enriched_FIXED_annotated.txt.Annotation.targets.txt
+-rw-r--r-- 1 gaddam.h users  93M Nov 25 19:48 results/person4/ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users 2.8M Nov 25 19:48 results/person4/ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt
+            
+cd ~/crispritz_repro/results/person4
+
+^C
+[gaddam.h@explorer-01 crispritz_repro]$ cd ~/crispritz_repro/results/person4
+[gaddam.h@explorer-01 person4]$ cat > analyze_guides_final.sh << 'ENDSCRIPT'
+#!/bin/bash
+
+echo "=========================================="
+echo "CCR5 GUIDE ANALYSIS - Parts 7 & 8"
+echo "=========================================="
+
+mkdir -p reports figures
+
+# Extract unique guide sequences
+echo "Extracting guide sequences..."
+awk -F'\t' 'NR>1 {print $2}' ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt | \
+  sort -u > reports/all_guides.txt
+
+echo "Found $(wc -l < reports/all_guides.txt) unique guides"
+
+# Create CSV header
+echo "Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits_Ref,Intergenic_Ref,Variant_Increase_Pct" > reports/guide_summary.csv
+
+# Process each guide
+echo "Analyzing each guide..."
+while read guide; do
+  ref_count=$(grep -F "$guide" ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt | wc -l)
+          ^C
+[gaddam.h@explorer-01 person4]$ cat > analyze_guides_final.sh << 'ENDSCRIPT'
+#!/bin/bash
+
+echo "=========================================="
+echo "CCR5 GUIDE ANALYSIS - Parts 7 & 8"
+echo "=========================================="
+
+mkdir -p reports figures
+
+# Extract unique guide sequences
+echo "Extracting guide sequences..."
+awk -F'\t' 'NR>1 {print $2}' ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt | \
+  sort -u > reports/all_guides.txt
+
+echo "Found $(wc -l < reports/all_guides.txt) unique guides"
+
+# Create CSV header
+echo "Guide_Sequence,Total_OffTargets_Ref,Total_OffTargets_Enr,Gene_Hits_Ref,Intergenic_Ref,Variant_Increase_Pct" > reports/guide_summary.csv
+
+# Process each guide
+echo "Analyzing each guide..."
+while read guide; do
+  ref_count=$(grep -F "$guide" ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt | wc -l)
+ENDSCRIPT' -k2 -n reports/guide_summary.csv | tail -5 | tail -5orts/genes_hit_frequency.txtargets.txt | \ awk -F'\t' '{print $NF}' 
+[gaddam.h@explorer-01 person4]$ cd ~/crispritz_repro/results/person4
+[gaddam.h@explorer-01 person4]$ rm -f analyze_guides_final.sh
+[gaddam.h@explorer-01 person4]$ nano analyze_guides_final.sh
+[gaddam.h@explorer-01 person4]$ chmod +x analyze_guides_final.sh
+./analyze_guides_final.sh
+CCR5 GUIDE ANALYSIS
+Extracting guides...
+TOP 5 SAFEST:
+GGTACCTATCGATTGTCAGGNNN,23,23,15,8
+CCAGGTACCTATCGATTGTCNNN,31,31,17,14
+TCAGTTTACACCCGATCCACNNN,37,37,20,17
+AGTTTACACCCGATCCACTGNNN,38,39,20,18
+CAGTTTACACCCGATCCACTNNN,39,39,17,22
+BOTTOM 5 RISKIEST:
+GATTGTTTATTTTCTCTTCTNNN,880,881,396,484
+AAGGAAAAACAGGTCAGAGANNN,919,929,487,432
+AAATGAGAAGAAGAGGCACANNN,927,937,443,484
+GAGAAAATAAACAATCATGANNN,931,937,388,543
+TCTCTGTCACCTGCATAGCTNNN,2689,2719,1367,1322
+Done! Check reports/guide_summary.csv
+[gaddam.h@explorer-01 person4]$ awk -F'\t' 'NR>1 {print $NF}' ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt | \
+  grep -v "^n$" | tr ',' '\n' | sort | uniq -c | sort -rn > reports/genes_hit_frequency.txt
+[gaddam.h@explorer-01 person4]$ echo "Top 20 most frequently hit genes:"
+head -20 reports/genes_hit_frequency.txt
+Top 20 most frequently hit genes:
+    138 CCR2
+    125 CCR5AS
+    124 CCR5
+    102 DPP6
+     91 RAD51B
+     87 RABGAP1L
+     86 DAB1
+     72 INPP4B
+     66 PDE4D
+     64 DPP10
+     64 DMD
+     64 DLG2
+     62 RBFOX1
+     59 ERG
+     56 ANKS1B
+     54 CTNNA2
+     54 CDH23
+     54 CACNA1C
+     52 NRXN3
+     52 GRM8
+[gaddam.h@explorer-01 person4]$ echo ""
+echo "Checking for critical cancer genes..."
+grep -E "TP53|BRCA1|BRCA2|PTEN|RB1|APC" reports/genes_hit_frequency.txt | head -10
+
+Checking for critical cancer genes...
+     15 ADARB1
+      9 GRB10
+      5 TP53
+      5 MSH5-SAPCD1
+      5 LILRB1
+      4 APC
+      3 ARRB1
+      2 TP53BP1
+      2 SNAPC1
+      2 SCARB1
+[gaddam.h@explorer-01 person4]$ cd ~/crispritz_repro/results/person4
+
+cat > reports/FINAL_REPORT.txt << 'ENDREPORT'
+================================================================================
+CCR5 GUIDE SAFETY ANALYSIS - FINAL REPORT
+Person 4 (Harshini Gaddam)
+Date: November 25, 2025
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Analyzed 124 CCR5 guide RNAs for HIV therapy safety using CRISPRitz.
+Total off-targets identified: 32,668 (reference) / 32,992 (enriched)
+Variant impact: +1.0% increase with population variants
+
+KEY FINDINGS
+------------
+
+1. SAFEST GUIDES (TOP 5 - RECOMMENDED FOR THERAPY)
+   
+   Guide: GGTACCTATCGATTGTCAGG
+   - Off-targets: 23 (reference), 23 (enriched)
+   - Gene hits: 15
+   - Variant sensitivity: 0%
+cat reports/FINAL_REPORT.txt====================================================
+================================================================================
+CCR5 GUIDE SAFETY ANALYSIS - FINAL REPORT
+Person 4 (Harshini Gaddam)
+Date: November 25, 2025
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Analyzed 124 CCR5 guide RNAs for HIV therapy safety using CRISPRitz.
+Total off-targets identified: 32,668 (reference) / 32,992 (enriched)
+Variant impact: +1.0% increase with population variants
+
+KEY FINDINGS
+------------
+
+1. SAFEST GUIDES (TOP 5 - RECOMMENDED FOR THERAPY)
+   
+   Guide: GGTACCTATCGATTGTCAGG
+   - Off-targets: 23 (reference), 23 (enriched)
+   - Gene hits: 15
+   - Variant sensitivity: 0%
+   - Risk level: VERY LOW
+   
+   Guide: CCAGGTACCTATCGATTGTC
+   - Off-targets: 31 (reference), 31 (enriched)
+   - Gene hits: 17
+   - Variant sensitivity: 0%
+   - Risk level: VERY LOW
+   
+   Guide: TCAGTTTACACCCGATCCAC
+   - Off-targets: 37 (reference), 37 (enriched)
+   - Gene hits: 20
+   - Variant sensitivity: 0%
+   - Risk level: LOW
+   
+   Guide: AGTTTACACCCGATCCACTG
+   - Off-targets: 38 (reference), 39 (enriched)
+   - Gene hits: 20
+   - Variant sensitivity: 2.6%
+   - Risk level: LOW
+   
+   Guide: CAGTTTACACCCGATCCACT
+   - Off-targets: 39 (reference), 39 (enriched)
+   - Gene hits: 17
+   - Variant sensitivity: 0%
+   - Risk level: LOW
+
+2. RISKIEST GUIDES (BOTTOM 5 - DO NOT USE)
+   
+   Guide: TCTCTGTCACCTGCATAGCT
+   - Off-targets: 2,689 (reference), 2,719 (enriched)
+   - Gene hits: 1,367
+   - Variant sensitivity: 1.1%
+   - Risk level: EXTREMELY HIGH ⚠️
+   
+   Guide: GAGAAAATAAACAATCATGA
+   - Off-targets: 931 (reference), 937 (enriched)
+   - Gene hits: 388
+   - Variant sensitivity: 0.6%
+   - Risk level: VERY HIGH
+   
+   Guide: AAATGAGAAGAAGAGGCACA
+   - Off-targets: 927 (reference), 937 (enriched)
+   - Gene hits: 443
+   - Variant sensitivity: 1.1%
+   - Risk level: VERY HIGH
+   
+   Guide: AAGGAAAAACAGGTCAGAGA
+   - Off-targets: 919 (reference), 929 (enriched)
+   - Gene hits: 487
+   - Variant sensitivity: 1.1%
+   - Risk level: VERY HIGH
+   
+   Guide: GATTGTTTATTTTCTCTTCT
+   - Off-targets: 880 (reference), 881 (enriched)
+   - Gene hits: 396
+   - Variant sensitivity: 0.1%
+   - Risk level: VERY HIGH
+
+3. CRITICAL GENE HITS (Cancer Risk Assessment)
+   
+   TP53 (tumor suppressor): 5 hits across all guides
+   - HIGH CONCERN - mutations can cause Li-Fraumeni syndrome
+   
+   APC (colorectal cancer): 4 hits
+   - MODERATE CONCERN - mutations linked to colon cancer
+   
+   BRCA1/BRCA2: Not significantly hit
+   - LOW CONCERN
+
+4. MOST FREQUENTLY HIT GENES
+   
+   CCR2: 138 hits (expected - neighboring gene to CCR5)
+   CCR5AS: 125 hits (CCR5 antisense - also expected)
+   CCR5: 124 hits (target gene - correct)
+   DPP6: 102 hits (neuronal gene)
+   RAD51B: 91 hits (DNA repair gene)
+
+5. VARIANT IMPACT ANALYSIS
+   
+   Mean variant increase: +1.0% (324 additional off-targets)
+   - Much lower than expected 18-24% from literature
+   - Suggests these CCR5 guides are relatively insensitive to variants
+   - Good for consistent therapy across diverse populations
+
+RECOMMENDATIONS
+---------------
+
+FOR CLINICAL USE:
+✓ Use guides with <50 off-targets (top 10-15 guides)
+✓ Prioritize guides with 0% variant sensitivity
+✓ Avoid any guide hitting TP53 or APC
+
+FOR FURTHER VALIDATION:
+- Sequence off-target sites to confirm predictions
+- Test top 5 guides in cell culture for actual cutting
+- Validate lack of TP53/APC cutting experimentally
+
+CONCLUSIONS
+-----------
+The analysis identified 5 highly safe CCR5 guides suitable for HIV therapy
+with minimal off-target effects (<40 off-targets each). The low variant
+sensitivity (+1%) indicates these guides should work consistently across
+patient populations. However, the presence of TP53 and APC hits in the
+overall dataset emphasizes the need for careful guide selection.
+
+================================================================================
+Files Generated:
+- reports/guide_summary.csv (all 124 guides ranked)
+- reports/genes_hit_frequency.txt (gene impact analysis)
+- ccr5_analysis/ccr5_reference_FIXED_annotated.txt (full annotations)
+================================================================================
+[gaddam.h@explorer-01 person4]$ # View your key files
+ls -lh reports/
+ls -lh ccr5_analysis/*FIXED*
+total 128K
+-rw-r--r-- 1 gaddam.h users 3.0K Nov 25 20:01 all_guides.txt
+-rw-r--r-- 1 gaddam.h users 4.1K Nov 25 20:04 FINAL_REPORT.txt
+-rw-r--r-- 1 gaddam.h users 116K Nov 25 20:02 genes_hit_frequency.txt
+-rw-r--r-- 1 gaddam.h users 4.8K Nov 25 20:01 guide_summary.csv
+-rw-r--r-- 1 gaddam.h users  93M Nov 25 19:55 ccr5_analysis/ccr5_enriched_FIXED_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users 2.9M Nov 25 19:55 ccr5_analysis/ccr5_enriched_FIXED_annotated.txt.Annotation.targets.txt
+-rw-r--r-- 1 gaddam.h users 245K Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.extended_profile.xls
+-rw-r--r-- 1 gaddam.h users  14K Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.profile_complete.xls
+-rw-r--r-- 1 gaddam.h users  20K Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.profile_dna.xls
+-rw-r--r-- 1 gaddam.h users  20K Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.profile_rna.xls
+-rw-r--r-- 1 gaddam.h users  14K Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.profile.xls
+-rw-r--r-- 1 gaddam.h users 2.6M Nov 25 19:04 ccr5_analysis/ccr5_enriched_FIXED.targets.txt
+-rw-r--r-- 1 gaddam.h users  93M Nov 25 19:48 ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.summary.txt
+-rw-r--r-- 1 gaddam.h users 2.8M Nov 25 19:48 ccr5_analysis/ccr5_reference_FIXED_annotated.txt.Annotation.targets.txt
+-rw-r--r-- 1 gaddam.h users 245K Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.extended_profile.xls
+-rw-r--r-- 1 gaddam.h users  14K Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.profile_complete.xls
+-rw-r--r-- 1 gaddam.h users  20K Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.profile_dna.xls
+-rw-r--r-- 1 gaddam.h users  20K Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.profile_rna.xls
+-rw-r--r-- 1 gaddam.h users  14K Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.profile.xls
+-rw-r--r-- 1 gaddam.h users 2.6M Nov 25 19:02 ccr5_analysis/ccr5_reference_FIXED.targets.txt
+[gaddam.h@explorer-01 person4]$ Connection to login.explorer.northeastern.edu closed by remote host.
