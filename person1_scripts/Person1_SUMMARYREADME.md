@@ -50,7 +50,7 @@ Git (to clone this repository)
 ### Clone this repository on Explorer
 ### Create the project directory structure
 
-    ./setup_directories.sh
+./setup_directories.sh
 
 Creates:
 ~/crispritz_repro/data/hg19_chr
