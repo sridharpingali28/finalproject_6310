@@ -60,7 +60,7 @@ Creates:
 ~/crispritz_repro/logs
 ~/crispritz_repro/genome_library
 
-# On your local machine: pull and save the Docker image
+### On your local machine: pull and save the Docker image
 
 Run these commands locally:
 
@@ -71,7 +71,7 @@ Transfer the `.tar` file to Explorer:
 
 scp crispritz_docker.tar <USERNAME>@login.explorer.northeastern.edu:~/crispritz_repro/
 
-# Build the Apptainer container on Explorer
+### Build the Apptainer container on Explorer
 
 ./build_container.sh
 
@@ -80,7 +80,7 @@ builds crispritz.sif
 Verifies CRISPRitz is callable (crispritz.py)
 Confirms version 2.6.6 and available subcommands
 
-# Download hg19 genome, PAM, annotations, and EMX1 guide
+### Download hg19 genome, PAM, annotations, and EMX1 guide
 
 ./fasta_download.sh
 
@@ -90,7 +90,7 @@ Downloads the SpCas9 NGG PAM file (pamNGG.txt)
 Converts refGene annotations into BED format (refGene_hg19.bed)
 Creates the EMX1 guide file (guides/emx1.txt)
 
-# Index the hg19 genome with CRISPRitz
+### Index the hg19 genome with CRISPRitz
 
 ./index_genome.sh
 
@@ -100,7 +100,7 @@ Creates:
 
 This step validates that CRISPRitz is functioning and that the index can be built reproducibly on Explorer.
 
-# Run EMX1 off-target search
+### Run EMX1 off-target search
 
 ./run_emx1_search.sh
 
@@ -111,7 +111,7 @@ Additional summary/profile files
 
 This reproduces the EMX1 benchmark from the original CRISPRitz paper.
 
-# Annotate EMX1 off-target results
+### Annotate EMX1 off-target results
 
 ./annotate_emx1.sh
 
