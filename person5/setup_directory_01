@@ -1,0 +1,9 @@
+#!/bin/bash
+# Create project directory structure
+
+mkdir -p ~/crispritz_repro/{data,pam,guides,results,logs,genome_library}
+mkdir -p ~/crispritz_repro/data/hg19_chr
+
+cd ~/crispritz_repro
+echo "Directory structure created at ~/crispritz_repro"
+ls -lh
