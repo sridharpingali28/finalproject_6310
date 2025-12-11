@@ -34,6 +34,7 @@ cd ~/crispritz_repro
 nano index_genome.sh
 
 # inside index_genome.sh
+
 #!/bin/bash
 #SBATCH --job-name=crispritz_index
 #SBATCH --output=logs/index_%j.out
