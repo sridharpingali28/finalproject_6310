@@ -16,7 +16,7 @@ rest of the group used for mismatch/bulge validation and CCR5 guide analysis.
 All scripts are intended to be run on Explorer, except the Docker commands
 mentioned in comments (which are run on a local machine).
 
-`setup_directories.sh`  
+'setup_directories.sh' 
   Creates the shared `~/crispritz_repro` directory structure (data, pam, guides,
   results, logs, genome_library).
 
