@@ -1,9 +1,9 @@
 ### CRISPRitz Reproducibility Person 1 Responsibilities: Environment setup and EMX1 guide validation
 This respository folder contains the scripts used by myself, Cole Souders, to set up a fully reproducible CRISPRitz environment on Northeastern's Explorer HPC cluster and to reproduce the EMX1 off-target analysis from the CRISPRitz paper.
 The goals of this part of the project were to:
-Create a shared project directory on Explorer (`~/crispritz_repro`).
-Build an Apptainer container (`crispritz.sif`) from the official Pinello Lab
-`pinellolab/crispritz:latest` Docker image.
+Create a shared project directory on Explorer (~/crispritz_repro).
+Build an Apptainer container crispritz.sif from the official Pinello Lab
+"pinellolab/crispritz:latest" Docker image.
 Download the hg19 reference genome, NGG PAM file, gene annotations, and EMX1 guide.
 index the hg19 genome for CRISPRitz.
 Run an EMX1 off-target search and annotate the resulting sites.
@@ -26,19 +26,19 @@ mentioned in comments (which are run on a local machine).
 
 `fasta_download.sh`  
   Downloads the hg19 reference genome, SpCas9 NGG PAM file, hg19 refGene annotations,
-  and creates the EMX1 guide file (`guides/emx1.txt`).
+  and creates the EMX1 guide file (guides/emx1.txt).
 
 `index_genome.sh`  
   Uses CRISPRitz to index the hg19 genome with NGG PAM and creates
-  `genome_library/NGG_2_hg19/`.
+  genome_library/NGG_2_hg19/.
 
 `run_emx1_search.sh`  
   Runs a CRISPRitz search for the EMX1 guide against the hg19 index, producing
-  EMX1 off-target predictions in `results/emx1_hg19.*`.
+  EMX1 off-target predictions in results/emx1_hg19.
 
 `annotate_emx1.sh`  
-  Annotates the EMX1 off-targets using the `refGene_hg19.bed` annotation file and
-  writes an annotated output file in `results/`.
+  Annotates the EMX1 off-targets using the refGene_hg19.bed annotation file and
+  writes an annotated output file in results/.
 
 ### Prerequisites
 
@@ -54,12 +54,12 @@ mentioned in comments (which are run on a local machine).
     ./setup_directories.sh
 
 Creates:
-- `~/crispritz_repro/data/hg19_chr`
-- `~/crispritz_repro/pam`
-- `~/crispritz_repro/guides`
-- `~/crispritz_repro/results`
-- `~/crispritz_repro/logs`
-- `~/crispritz_repro/genome_library`
+- ~/crispritz_repro/data/hg19_chr
+- ~/crispritz_repro/pam
+- `/crispritz_repro/guides
+- ~/crispritz_repro/results
+- ~/crispritz_repro/logs
+- ~/crispritz_repro/genome_library
 
 # 3. On your local machine: pull and save the Docker image
 
@@ -77,8 +77,8 @@ scp crispritz_docker.tar <USERNAME>@login.explorer.northeastern.edu:~/crispritz_
 ./build_container.sh
 
 Does:
-- Builds `crispritz.sif`
-- Verifies CRISPRitz is callable (`crispritz.py`)
+- Builds crispritz.sif
+- Verifies CRISPRitz is callable (crispritz.py)
 - Confirms version 2.6.6 and available subcommands
 
 # 5. Download hg19 genome, PAM, annotations, and EMX1 guide
@@ -86,10 +86,10 @@ Does:
 ./fasta_download.sh
 
 Does:
-- Downloads and extracts `chromFa.tar.gz` into `data/hg19_chr`
-- Downloads the SpCas9 NGG PAM file (`pamNGG.txt`)
-- Converts refGene annotations into BED format (`refGene_hg19.bed`)
-- Creates the EMX1 guide file (`guides/emx1.txt`)
+- Downloads and extracts chromFa.tar.gz into data/hg19_chr
+- Downloads the SpCas9 NGG PAM file (pamNGG.txt)
+- Converts refGene annotations into BED format (refGene_hg19.bed)
+- Creates the EMX1 guide file (guides/emx1.txt)
 
 # 6. Index the hg19 genome with CRISPRitz
 
@@ -107,7 +107,7 @@ This step validates that CRISPRitz is functioning and that the index can be buil
 
 Outputs written to:
 
-- `results/emx1_hg19.targets.txt`
+- results/emx1_hg19.targets.txt
 - Additional summary/profile files
 
 This reproduces the EMX1 benchmark from the original CRISPRitz paper.
