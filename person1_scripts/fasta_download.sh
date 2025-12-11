@@ -34,5 +34,3 @@ echo "GAGTCCGAGCAGAAGAAGAANGG" > emx1.txt
 echo "EMX1 guide: $(cat emx1.txt)"
 
 echo "Data download complete!"
-
-chmod +x fasta_download.sh
