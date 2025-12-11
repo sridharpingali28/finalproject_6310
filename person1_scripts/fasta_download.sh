@@ -1,7 +1,12 @@
 #!/bin/bash
-# Download required data files
+# Download required data files for CRISPRitz EMX1 test
+
+set -euo pipefail
 
 cd ~/crispritz_repro
+
+# Ensure expected subdirectories exist
+mkdir -p data/hg19_chr pam guides
 
 # Download hg19 reference genome (~900MB)
 echo "Downloading hg19 genome..."
@@ -27,10 +32,10 @@ gunzip refGene.txt.gz
 cut -f3,5,6,13 refGene.txt | awk '{print $1"\t"$2"\t"$3"\t"$4}' > refGene_hg19.bed
 echo "Created annotation file with $(wc -l < refGene_hg19.bed) gene features"
 
-# Create EMX1 guide file
+# Create EMX1 guide file (20-nt spacer only; PAM handled via pamNGG.txt)
 echo "Creating EMX1 guide file..."
 cd ../guides
-echo "GAGTCCGAGCAGAAGAAGAANGG" > emx1.txt
+echo "GAGTCCGAGCAGAAGAAGAA" > emx1.txt
 echo "EMX1 guide: $(cat emx1.txt)"
 
 echo "Data download complete!"
