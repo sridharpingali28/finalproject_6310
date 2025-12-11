@@ -47,8 +47,8 @@ Docker installed on a local machine (for the Docker → tar)
 Git (to clone this repository)
 
 ### STEPWISE EXECUTION
-#### Clone this repository on Explorer
-#### Create the project directory structure
+### Clone this repository on Explorer
+### Create the project directory structure
 
     ./setup_directories.sh
 
