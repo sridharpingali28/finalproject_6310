@@ -26,5 +26,3 @@ apptainer exec crispritz.sif crispritz.py
 
 echo "Container build complete."
 ls -lh crispritz.sif
-
-chmod +x build_container.sh
