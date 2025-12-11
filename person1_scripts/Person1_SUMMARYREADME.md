@@ -41,25 +41,24 @@ mentioned in comments (which are run on a local machine).
   writes an annotated output file in results/.
 
 ### Prerequisites
-
-- Access to Northeastern's Explorer HPC cluster.
-- Apptainer installed on Explorer.
-- Docker installed on a local machine (for the Docker → tar)
-- Git (to clone this repository)
+Access to Northeastern's Explorer HPC cluster.
+Apptainer installed on Explorer.
+Docker installed on a local machine (for the Docker → tar)
+Git (to clone this repository)
 
 ### STEPWISE EXECUTION
-# 1. Clone this repository on Explorer
-# 2. Create the project directory structure
+# Clone this repository on Explorer
+# Create the project directory structure
 
     ./setup_directories.sh
 
 Creates:
-- ~/crispritz_repro/data/hg19_chr
-- ~/crispritz_repro/pam
-- `/crispritz_repro/guides
-- ~/crispritz_repro/results
-- ~/crispritz_repro/logs
-- ~/crispritz_repro/genome_library
+~/crispritz_repro/data/hg19_chr
+~/crispritz_repro/pam
+`/crispritz_repro/guides
+~/crispritz_repro/results
+~/crispritz_repro/logs
+~/crispritz_repro/genome_library
 
 # On your local machine: pull and save the Docker image
 
@@ -77,19 +76,19 @@ scp crispritz_docker.tar <USERNAME>@login.explorer.northeastern.edu:~/crispritz_
 ./build_container.sh
 
 Does:
-- Builds crispritz.sif
-- Verifies CRISPRitz is callable (crispritz.py)
-- Confirms version 2.6.6 and available subcommands
+builds crispritz.sif
+Verifies CRISPRitz is callable (crispritz.py)
+Confirms version 2.6.6 and available subcommands
 
 # Download hg19 genome, PAM, annotations, and EMX1 guide
 
 ./fasta_download.sh
 
 Does:
-- Downloads and extracts chromFa.tar.gz into data/hg19_chr
-- Downloads the SpCas9 NGG PAM file (pamNGG.txt)
-- Converts refGene annotations into BED format (refGene_hg19.bed)
-- Creates the EMX1 guide file (guides/emx1.txt)
+Downloads and extracts chromFa.tar.gz into data/hg19_chr
+Downloads the SpCas9 NGG PAM file (pamNGG.txt)
+Converts refGene annotations into BED format (refGene_hg19.bed)
+Creates the EMX1 guide file (guides/emx1.txt)
 
 # Index the hg19 genome with CRISPRitz
 
@@ -107,8 +106,8 @@ This step validates that CRISPRitz is functioning and that the index can be buil
 
 Outputs written to:
 
-- results/emx1_hg19.targets.txt
-- Additional summary/profile files
+results/emx1_hg19.targets.txt
+Additional summary/profile files
 
 This reproduces the EMX1 benchmark from the original CRISPRitz paper.
 
@@ -118,5 +117,5 @@ This reproduces the EMX1 benchmark from the original CRISPRitz paper.
 
 Produces:
 
-- `results/emx1_hg19_annotated.txt`
-- Annotation summary files (`*.Annotation.*`)
+`results/emx1_hg19_annotated.txt`
+Annotation summary files (`*.Annotation.*`)
